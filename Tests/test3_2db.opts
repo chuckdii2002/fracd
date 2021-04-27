@@ -1,0 +1,46 @@
+-dim 2 
+-meshfilename 2dmesh.msh 
+-conductivity 1,1
+-Pbc 
+-numPbclabels 4 
+-PBClabels 1,2,3,4
+-Pbcvalues 0,0,0,0
+#Well data
+-nw 2
+-w0_top 5,5 
+-w0_bottom 4.9,5 
+-w0_coords 2.5,2.5
+-w0_Qws 1 
+-w0_Qos 1 
+-w0_Qgs 1 
+-w0_Pbh 0.1 
+-w0_h 1 
+-w0_rw 0.01 
+-w0_constraint WATERRate 
+-w0_type PRoducer
+-w1_top 5,5 
+-w1_bottom 7,8 
+-w1_coords 7.5,7.5 
+-w1_Qws 1 
+-w1_Qos 1 
+-w1_Qgs 1 
+-w1_Pbh 0.5 
+-w1_h 1 
+-w1_rw 0.01 
+-w1_constraint WATERRate 
+-w1_type injector
+-verbose
+#Reservoir and fluid properties
+-phi 1
+-Cr 1.
+-waterviscosity 1
+-perm 1.0,1.0
+-timevalue 1.0
+-wFVF 1.0
+-refpressure 0.
+-initialpressure 0.0
+-watercompressibility 0.
+-oilcompressibility 1.0
+-coeffwaterrelperm 0.0
+-coeffwaterdensity 0.
+-coeffwaterviscosity 0.

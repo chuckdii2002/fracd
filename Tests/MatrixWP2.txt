@@ -1,0 +1,260 @@
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 50819.)  (736, 16939.7)  (783, 16939.7)  (784, 5646.55) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 2983.82)  (736, 788.143)  (783, 788.143)  (784, 233.524) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 116.083)  (736, -184.864)  (783, -184.864)  (784, -92.0924) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 189.374)  (736, -161.691)  (783, -161.691)  (784, -84.4458) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 190.344)  (736, -161.399)  (783, -161.399)  (784, -84.3503) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 190.394)  (736, -161.383)  (783, -161.383)  (784, -84.3451) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 190.397)  (736, -161.382)  (783, -161.382)  (784, -84.3448) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 222.653)  (736, -182.687)  (783, -182.687)  (784, -93.8923) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 249.343)  (736, -177.72)  (783, -177.72)  (784, -91.0188) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 250.433)  (736, -177.479)  (783, -177.479)  (784, -90.906) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 250.353)  (736, -177.508)  (783, -177.508)  (784, -90.9145) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 250.342)  (736, -177.511)  (783, -177.511)  (784, -90.9157) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 250.341)  (736, -177.511)  (783, -177.511)  (784, -90.9158) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 250.341)  (736, -177.512)  (783, -177.512)  (784, -90.9158) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 306.168)  (736, -201.094)  (783, -201.094)  (784, -100.79) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 337.264)  (736, -196.634)  (783, -196.634)  (784, -97.6953) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 337.865)  (736, -196.602)  (783, -196.602)  (784, -97.6428) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 337.799)  (736, -196.626)  (783, -196.626)  (784, -97.6495) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 337.792)  (736, -196.629)  (783, -196.629)  (784, -97.6502) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 337.792)  (736, -196.629)  (783, -196.629)  (784, -97.6503) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 405.713)  (736, -225.145)  (783, -225.145)  (784, -109.176) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 441.164)  (736, -221.252)  (783, -221.252)  (784, -105.805) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 442.548)  (736, -221.042)  (783, -221.042)  (784, -105.686) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 442.606)  (736, -221.031)  (783, -221.031)  (784, -105.681) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 442.605)  (736, -221.031)  (783, -221.031)  (784, -105.681) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 442.605)  (736, -221.031)  (783, -221.031)  (784, -105.681) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 497.718)  (736, -255.072)  (783, -255.072)  (784, -118.751) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 534.717)  (736, -250.567)  (783, -250.567)  (784, -114.771) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 536.292)  (736, -250.286)  (783, -250.286)  (784, -114.627) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 536.376)  (736, -250.264)  (783, -250.264)  (784, -114.618) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 536.378)  (736, -250.264)  (783, -250.264)  (784, -114.618) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 536.378)  (736, -250.264)  (783, -250.264)  (784, -114.618) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 536.378)  (736, -250.264)  (783, -250.264)  (784, -114.618) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 547.323)  (736, -289.007)  (783, -289.007)  (784, -128.629) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 578.769)  (736, -283.127)  (783, -283.127)  (784, -124.057) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 580.38)  (736, -282.702)  (783, -282.702)  (784, -123.875) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 580.48)  (736, -282.666)  (783, -282.666)  (784, -123.862) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 580.488)  (736, -282.663)  (783, -282.663)  (784, -123.861) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 580.489)  (736, -282.663)  (783, -282.663)  (784, -123.861) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 580.489)  (736, -282.663)  (783, -282.663)  (784, -123.861) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 574.586)  (736, -324.299)  (783, -324.299)  (784, -138.011) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 599.716)  (736, -317.663)  (783, -317.663)  (784, -133.372) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.128)  (736, -316.669)  (783, -316.669)  (784, -133.032) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.585)  (736, -316.442)  (783, -316.442)  (784, -132.96) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.638)  (736, -316.416)  (783, -316.416)  (784, -132.952) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.646)  (736, -316.412)  (783, -316.412)  (784, -132.951) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.647)  (736, -316.411)  (783, -316.411)  (784, -132.951) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 602.647)  (736, -316.411)  (783, -316.411)  (784, -132.951) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 599.987)  (736, -362.565)  (783, -362.565)  (784, -147.669) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 599.987)  (736, -362.565)  (783, -362.565)  (784, -147.669) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 585.563)  (736, -436.127)  (783, -436.127)  (784, -168.159) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 585.563)  (736, -436.127)  (783, -436.127)  (784, -168.159) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 502.12)  (736, -531.46)  (783, -531.46)  (784, -196.025) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 650.078)  (736, -413.773)  (783, -413.773)  (784, -158.796) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 650.128)  (736, -413.959)  (783, -413.959)  (784, -158.895) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 646.734)  (736, -416.834)  (783, -416.834)  (784, -159.754) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 644.317)  (736, -418.881)  (783, -418.881)  (784, -160.366) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 643.372)  (736, -419.681)  (783, -419.681)  (784, -160.605) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 643.037)  (736, -419.964)  (783, -419.964)  (784, -160.69) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.921)  (736, -420.063)  (783, -420.063)  (784, -160.72) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.881)  (736, -420.097)  (783, -420.097)  (784, -160.73) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.867)  (736, -420.108)  (783, -420.108)  (784, -160.733) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.863)  (736, -420.112)  (783, -420.112)  (784, -160.734) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.861)  (736, -420.113)  (783, -420.113)  (784, -160.735) 
+row 1:
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (735, 642.861)  (736, -420.114)  (783, -420.114)  (784, -160.735) 
+row 1:

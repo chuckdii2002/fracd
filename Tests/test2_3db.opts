@@ -1,0 +1,12 @@
+-dim 3 
+-meshfilename 3dmesh.msh 
+-conductivity 1,1,1
+-Tbc 
+-Tbc_numlabels 5
+-TBC_labels 1,2,4,5,6
+-Tbc_values 4,4,4,4,4
+-heatfluxbc 
+-heatfluxbc_numlabels 1 
+-heatfluxbc_labels 3
+-heatfluxbc_values -1
+-elementtype TETRAHEDRAL

@@ -1,0 +1,432 @@
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+-40214.2
+0.
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+-1987.41
+0.00488398
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+153.69
+0.00566919
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.725
+0.00568751
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.039
+0.00568861
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.003
+0.00568869
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00568869
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00568869
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+115.398
+0.00417902
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.571
+0.00411879
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9359
+0.00411492
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.992
+0.00411461
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9993
+0.00411458
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9999
+0.00411458
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00411458
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00411458
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+114.406
+0.00378845
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.181
+0.00375457
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9532
+0.0037517
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9955
+0.00375147
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9996
+0.00375145
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00375145
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00375145
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+114.397
+0.00354936
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.603
+0.0035319
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.026
+0.00353098
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9993
+0.00353091
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9999
+0.0035309
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.0035309
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.0035309
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+114.975
+0.00338022
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.703
+0.00336292
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.042
+0.00336141
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.001
+0.00336126
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00336124
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00336124
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00336124
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00336124
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+115.126
+0.00323328
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.856
+0.00321196
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.062
+0.00320907
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.005
+0.00320872
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.001
+0.00320869
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00320868
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00320868
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00320868
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+115.162
+0.00308331
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+101.816
+0.00305657
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.349
+0.0030509
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.042
+0.00304993
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.006
+0.00304978
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.001
+0.00304976
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00304976
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00304976
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+100.
+0.00304976
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+140.605
+0.00252481
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+120.56
+0.00285894
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+118.188
+0.00289825
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.769
+0.00290518
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.678
+0.00290669
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.657
+0.00290704
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.653
+0.00290711
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.652
+0.00290713
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+117.651
+0.00290714
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+429.7
+0.00264833
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+186.988
+0.00239769
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+162.905
+0.00237273
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.417
+0.00237015
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.073
+0.00236979
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.025
+0.00236974
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.018
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+160.017
+0.00236973
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+220.597
+0.0020674
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+93.4043
+0.0020321
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+93.5391
+0.00202901
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+96.5562
+0.00202878
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+98.7056
+0.00202878
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.5453
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.843
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9462
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9816
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9937
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9979
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9993
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9998
+0.0020288
+Vec Object: Well water Rate 1 MPI processes
+  type: seq
+99.9999
+0.0020288

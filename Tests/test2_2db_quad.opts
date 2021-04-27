@@ -1,0 +1,12 @@
+-dim 2 
+-meshfilename 2dmesh_quad.msh 
+-conductivity 1,1
+-Tbc 
+-Tbc_numlabels 3 
+-TBC_labels 1,2,3
+-Tbc_values 4,4,4
+-heatfluxbc 
+-heatfluxbc_numlabels 1 
+-heatfluxbc_labels 4
+-heatfluxbc_values -1
+-elementtype QUADRILATERAL

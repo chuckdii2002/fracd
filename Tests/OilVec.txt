@@ -1,0 +1,6 @@
+Vec Object: 1 MPI processes
+  type: seq
+0.
+2.
+0.5
+0.

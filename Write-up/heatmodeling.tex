@@ -1,0 +1,290 @@
+\chapter{Heat Flow Modeling}	
+\section{Thermal fracturing}
+Thermal fracturing occurs during fluid injection operations such as water flooding and other secondary or tertiary recovery processes, when there is a large temperature difference between the injected fluid and formation rock \cite{perkins1,fjaer,settari4}. This temperature difference causes heat transfer between cold injected fluid and hot formation rock, creating a growing region of cooled rock around the well bore as more fluid is injected. As a result, formation rock shrinks as thermoelastic stress is induced causing a reduction in the in-situ stresses. Fractures are induced when the minimum in-situ stress falls below the injection pressure of the fluid and the fracture extent is dependent on the extent of the cooled region in the formation around the well bore.
+
+Fracture formation in the early days of cold fluid injection were considered bad practice which in some cases, happened unexpectedly. With injectivity increase that comes with fracture formation during fluid injection, these operations are now routinely designed to operate at conditions favorable for fracturing. Fluid injection design includes planning for well placements, injection fluid characteristics and reservoir fluid displacement patterns. An important element for studying subsurface fluid displacement patterns is the ability to predict fracture growth under different thermal conditions and the associated fracture characteristics like geometry, similar to the case of conventional hydraulic fracturing. Similar to hydraulic fracturing, thermal fractures open perpendicular to the minimum in-situ stress directions but at lower fluid pressure since formation compressive stresses are reduced by the induced thermal stresses.  As the fracture propagates, the cooling effect of the injected fluid increases the extent of the cooled region around the fracture, inducing thermoelastic stress, which in turn affects fracture growth. Thus, thermal fracturing occurs in association with hydraulic fracturing since any solution of the problem will couple fluid flow and heat transfer models with the fracture mechanics.
+
+In this part of the work, variational fracture model with the fluid flow model earlier described will be coupled with some heat transfer model to solve the thermal fracturing problem. At this time, I have not carried out any significant research in this area. 
+
+
+\section{Finite Element Implementation of Heat Flow}
+The constitutive relationship for the heat flux is given by Fourier's law as below
+\begin{equation}
+\vec{q}=-\mathbf{K}_T\nabla T
+\end{equation}
+Where $\vec{q}$, $T$ and $\mathbf{K}_T$ are the heat flux, temperature and effective thermal conductivity respectively.
+%
+%
+%
+\begin{equation}
+(\rho c_p )_{eff}\frac{\partial T}{\partial t} + \rho_wc_p^w(\vec{v}_w\cdot\nabla T)-\nabla\cdot(\mathbf{K}_{eff}\nabla T)=-q_m h_w
+\end{equation}
+%
+Where
+$\mathbf{K}_{eff} = \mathbf{K}_T^s +\mathbf{K}_T^w$, $(\rho c_p )_{eff} = \rho_s c_p ^s +\rho_w c_p ^w$, $h_w$ is the enthalpy of the injected fluid and $q_m$ is the injected fluid mass flow rate per unit volume. $c_p$ specific heat capacity.
+%
+%
+\\
+Second part \\
+\begin{equation}
+\Big((1-\phi)\rho_s c_s + \phi \rho_wc_w\Big)\frac{\partial T}{\partial t} + \rho_wc_w(\vec{v}_w\cdot\nabla T)-\nabla\cdot\Big(\big((1-\phi)\mathbf{K}_{s}+\phi \mathbf{K}_w\big)\nabla T\Big)=\bar{q}-q_m h_w
+\end{equation}
+%
+$\bar{q}$: volumetric heat source or sink i.e heat production/injection per unit volume\\
+%
+$h$: enthalpy\\
+%
+\subsection{Derivation from energy balance}
+Heat transfer modes
+\begin{enumerate}
+\item Conduction
+\item Advection
+\item Convection. Conduction and advection are dominant and accounted for in energy balance equation while convection is accounted for by instantaneous thermal equilibrium between fluid and reservoir solids \cite{spillette}
+\end{enumerate}
+
+
+The heat equation is derived from conservation of energy in the porous media under the assumption that the phases are in a state of local thermal equilibrium \cite{lewis,vadimas,languri}. This implies that the temperature of the fluid and solid phases are equal.\\
+The energy balance for the liquid phase is 
+\begin{equation} \label{enbal:liq}
+\frac{\partial }{\partial t}(\phi\rho_w h_w)+ \nabla\cdot(\rho_w\vec{u}_wh_w)=\nabla\cdot( \phi\mathbf{\chi}_w\nabla T)+\phi\bar{q}_w
+\end{equation}
+Enthalpy is related to the specific heat by
+\begin{equation}
+c_w=\frac{\partial h_w}{\partial T} \Rightarrow h_w=\int_{T_o}^T c_w \,dT + h_{w_o}
+\end{equation}
+Where $h_{w_o}$ and $T_o$ are reference enthalpy and temperature respectively. For $c_w$ independent of temperature
+\begin{equation} \label{cp:liq}
+h_w= c_w (T-T_o) + h_{w_o}
+\end{equation}
+The solid phase equivalent of Eqn. \ref{cp:liq} is
+\begin{equation} \label{cp:sol}
+h_s= c_s (T-T_o) + h_{s_o}
+\end{equation}
+%
+Energy balance in terms of temperature is obtained by substituting Eqn. \ref{cp:liq} into Eqn. \ref{enbal:liq}.
+\begin{equation} \label{enbalT:liq}
+(\phi\rho_w c_w)\frac{\partial T }{\partial t}+ \rho_wc_w(\vec{u}_w\cdot\nabla T)=\nabla\cdot( \phi\mathbf{\chi}_w\nabla T)+\phi\bar{q}_w
+\end{equation}
+%
+
+Similarly, the solid phase energy balance is derived after neglecting the convective heat transfer in the solid phase \citeN{lewis} as  
+\begin{equation}\label{enbal:sol}
+\frac{\partial }{\partial t}\big((1-\phi)\rho_s h_s\big)=\nabla\cdot\big((1- \phi)\mathbf{\chi}_s\nabla T\big)+(1-\phi)\bar{q}_s
+\end{equation}
+In terms of temperature as 
+\begin{equation} \label{enbalT:sol}
+\big((1-\phi)\rho_s c_s\big)\frac{\partial T}{\partial t}=\nabla\cdot\big( (1-\phi)\mathbf{\chi}_s\nabla T\big)+(1-\phi)\bar{q}_s
+\end{equation}
+%
+which upon addition of Eqns. \ref{enbalT:liq} and \ref{enbalT:sol} we obtain
+%
+\begin{equation}
+(\rho c )_{eff}\frac{\partial T}{\partial t} + \rho_wc_w(\vec{u}_w\cdot\nabla T)-\nabla\cdot(\mathbf{\chi}_{eff}\nabla T)=\bar{q}
+\end{equation}
+%
+where
+\begin{equation}
+\begin{split}
+\mathbf{\chi}_{eff} &= (1-\phi)\mathbf{\chi}_s +\phi\mathbf{\chi}_w		\\
+(\rho c_p )_{eff} &= (1-\phi)\rho_s c_s +\phi\rho_w c_w			\\
+\bar{q} &= (1-\phi)\bar{q}_s+\phi\bar{q}_w
+\end{split}
+\end{equation}
+\subsection{Boundary conditions}
+Appropriate boundary conditions are necessary to complete the problem for unique solution to the heat transfer problem
+\subsubsection{Temperature BC}
+Boundary temperatures are specified
+\subsubsection{Heat flux BC}
+Normal component of heat flux is specified on a boundary. 
+\begin{equation}
+-\mathbf{\chi}_{eff}\nabla T\cdot\vec{n}=q
+\end{equation}
+\\
+\section{Characteristic Galerkin method for heat model}
+\begin{equation}
+\frac{\partial T}{\partial t} + \frac{\rho_wc_w}{(\rho c )_{eff}}(\vec{u}_w\cdot\nabla T)-\frac{1}{(\rho c )_{eff}}\nabla\cdot(\mathbf{\chi}_{eff}\nabla T)=\frac{1}{(\rho c )_{eff}}\bar{q}
+\end{equation}
+%
+\begin{equation}
+\frac{\partial T}{\partial t}(\vec{x},t) + (\vec{u}_{eff}\cdot\nabla T)-\nabla\cdot(\mathbf{\alpha}_{eff}\nabla T)=\frac{1}{(\rho c )_{eff}}\bar{q}
+\end{equation}
+%
+where $\vec{u}_{eff} =  \frac{\rho_wc_w}{(\rho c )_{eff}}\vec{u}_w$ and $\alpha_{eff}$ is the thermal diffusivity.
+
+The advection part of the above equation can be written in the Lagrangian framework by differentiating along the model characteristic and the equation becomes
+\begin{equation}
+\frac{\partial T}{\partial t}(\vec{x}^{\prime},t) -\nabla^{\prime}\cdot(\mathbf{\alpha}_{eff}\nabla^{\prime} T)=\frac{1}{(\rho c )_{eff}}\bar{q}(\vec{x}^{\prime})
+\end{equation}
+Upon evaluation at time step $n+\theta$ and spatial position $\vec{x}-\Delta\vec{x}$, the equation below is obtained.
+\begin{equation}
+\frac{\partial T}{\partial t}(\vec{x}^{\prime},t)_{n+\theta} -\nabla^{\prime}\cdot(\mathbf{\alpha}_{eff}\nabla^{\prime} T)^{n+\theta}|_{\vec{x}-\Delta\vec{x}}=\frac{1}{(\rho c )_{eff}}\bar{q}^{n+\theta}|_{\vec{x}-\Delta\vec{x}}
+\end{equation}
+Time discretization of the above equation along the characteristic becomes
+\begin{equation}	\label{eq:charact}
+\begin{split}
+\frac{T^{n+1}|_{\vec{x}}-T^n|_{\vec{x}-\Delta \vec{x}}}{\Delta t}  -\nabla^{\prime}\cdot(\mathbf{\alpha}_{eff}\nabla^{\prime} T)^{n+\theta}|_{\vec{x}-\Delta\vec{x}}=\frac{1}{(\rho c )_{eff}}\bar{q}^{n+\theta}|_{\vec{x}-\Delta\vec{x}}
+\end{split}
+\end{equation}
+%
+\begin{equation}	\label{taylorT}
+T|_{\vec{x}-\Delta x} = T(\vec{x})- \Delta \vec{x}\cdot  \nabla\,T(\vec{x})+\frac{1}{2!}\Delta\vec{x}\cdot\big(D^2T(\vec{x})\big)\Delta\vec{x}+\cdots
+\end{equation}
+%
+\begin{equation}	\label{taylorq}
+\bar{q}|_{\vec{x}-\Delta x} = \bar{q}(\vec{x})- \Delta \vec{x}\cdot  \nabla\,\bar{q}(\vec{x})+\frac{1}{2!}\Delta\vec{x}\cdot\big(D^2\bar{q}(\vec{x})\big)\Delta\vec{x}+\cdots
+\end{equation}
+%
+\begin{equation}	\label{taylordq}
+\nabla^{\prime}\cdot(\mathbf{\alpha}_{eff}\nabla^{\prime} T)|_{\vec{x}-\Delta\vec{x}} = \nabla\cdot(\mathbf{\alpha}_{eff}\nabla T)|_{\vec{x}}- \Delta \vec{x}\cdot  \nabla\,\{ \nabla\cdot(\mathbf{\alpha}_{eff}\nabla T)|_{\vec{x}}\}+\cdots
+\end{equation}
+%
+Substituting Eqns. \ref{taylorT}, \ref{taylorq} and \ref{taylordq} into Eqn. \ref{eq:charact}, we obtain
+\begin{equation}
+\begin{split}
+\frac{1}{\Delta t}\Big(T^{n+1}-T^n+\Delta \vec{x}\cdot  \nabla\,T^n-\frac{1}{2}\Delta\vec{x}\cdot\{D^2T^n\}\Delta\vec{x}\Big)	
+-\nabla\cdot(\mathbf{\alpha}_{eff}\nabla T^{n+\theta}) \\
+=\frac{1}{(\rho c )_{eff}}\big(\bar{q}^{n+\theta}- \Delta \vec{x}\cdot  \nabla\,\bar{q}^{n+\theta}\big)
+\end{split}
+\end{equation}
+\\
+\\
+\begin{equation}
+\begin{split}
+\frac{1}{\Delta t}(T^{n+1}-T^n)=-\frac{\Delta \vec{x}}{\Delta t}\cdot  \nabla\,T^n+\frac{\Delta\vec{x}}{2 \Delta t}\cdot\{D^2T^n\}\Delta\vec{x}	
++\nabla\cdot(\mathbf{\alpha}_{eff}\nabla T^{n+\theta})\\
++\frac{1}{(\rho c )_{eff}}\big(\bar{q}^{n+\theta}- \Delta \vec{x}\cdot  \nabla\,\bar{q}^{n+\theta}\big)
+\end{split}
+\end{equation}
+
+Since $\Delta x$ is arbitrary, it can be chosen so that $\frac{\Delta \vec{x}}{\Delta t}=\vec{u}_{eff}$, then equation can be written as
+\begin{equation}	\label{eq:expcharact}
+\begin{split}
+\frac{T^{n+1}-T^n}{\Delta t}=-\vec{u}_{eff}\cdot \nabla\,T^n+\Delta t\frac{\vec{u}_{eff}}{2 }\cdot\{D^2T^n\}\vec{u}_{eff}	
++\nabla\cdot(\mathbf{\alpha}_{eff}\nabla T^{n+\theta})\\
++\frac{1}{(\rho c )_{eff}}\big(\bar{Q}^{n+\theta}- \Delta t\, \vec{u}_{eff}\cdot  \nabla\,\bar{Q}^{n+\theta}\big)
+\end{split}
+\end{equation}
+The third therm of the above equation is a stabilization term which is identical to the stabilization component in the Petrov-Galerkin solution of advection-diffusion problem \citeN{zienkiewicz}.
+Considering that $\vec{u}_{eff}\cdot\nabla(\vec{u}_{eff}\cdot\nabla T)=\vec{u}_{eff}\cdot\{D^2T^n\}\,\vec{u}_{eff}$, the conventional Galerkin finite element is applied to Eqn. \ref{eq:expcharact} as follows. Multiplying Eqn. \ref{eq:expcharact} by a test function $w$ and integrating over the whole domain, we obtain
+\begin{equation}
+\begin{split}
+\int_{\Omega}\Big(\frac{T^{n+1}-T^n}{\Delta t}\Big)w=-\int_{\Omega}\vec{u}_{eff}\cdot \nabla\,T^nw+\frac{\Delta t}{2}\int_{\Omega}\vec{u}_{eff}\cdot\nabla(\vec{u}_{eff}\cdot\nabla T^n)w	
++\int_{\Omega}\nabla\cdot(\mathbf{\alpha}_{eff}\nabla T^{n+\theta})w\\
++\frac{1}{(\rho c )_{eff}}\int_{\Omega}\big(\bar{Q}^{n+\theta}- \Delta t\, \vec{u}_{eff}\cdot  \nabla\,\bar{Q}^{n+\theta}\big)w
+\end{split}
+\end{equation}
+Upon integration by parts, we obtain,
+\begin{equation}
+\begin{split}		\label{h_eq}
+\int_{\Omega}\Big(\frac{T^{n+1}-T^n}{\Delta t}\Big)w+\int_{\Omega}\vec{u}_{eff}\cdot \nabla\,T^nw+\int_{\Omega}\nabla w\cdot\mathbf{\alpha}_{eff}\nabla T^{n+\theta}+\frac{\Delta t}{2}\int_{\Omega}\nabla\cdot(w\,\vec{u}_{eff})(\vec{u}_{eff}\cdot\nabla T^n)	\\
+=\frac{1}{(\rho c )_{eff}}\int_{\Omega}\big(\bar{Q}^{n+\theta}- \Delta t\, \vec{u}_{eff}\cdot  \nabla\,\bar{Q}^{n+\theta}\big)w-\frac{1}{(\rho c)_{eff}}\int_{\Gamma}q^{n+\theta}w+\frac{\Delta t}{2}\int_{\Gamma}(\vec{u}_{eff}\cdot\nabla T^n)(w\,\vec{u}_{eff})\cdot\vec{n}
+\end{split}
+\end{equation}
+
+For Galerkin finite element, the test ant trial spaces are the same. Thus, test function and temperature can be represented as linear combination of the the same shape function $\phi$
+
+\begin{gather}		
+T_h=\sum_{i=1}^nT_i\varphi_i	\label{Tbasis}\\
+%\end{gather}
+%\begin{gather}		
+w_h=\sum_{i=1}^nw_i\varphi_i\label{wbasis}
+\end{gather}
+
+According to \citeN{zienkiewicz,lewis1}, boundary terms from the stabilization component can be ignored without any loss of accuracy. Therefore, the last part of Eqn. \ref{h_eq} is neglected. On substituting Eqn. \ref{Tbasis} and \ref{wbasis} into Eqn. \ref{h_eq}, we obtain
+
+\begin{equation}      \label{h_eq1}
+\begin{split}		
+ \mathcal{B}\big(T_h;  w_h\big)_h & = \sum_i^n\sum_j^nw_i\frac{\Delta \{T\}_j}{\Delta t}\int_{\Omega}\phi_i\phi_j+\sum_i^n\sum_j^nw_i\,T^n_j\int_{\Omega}\phi_i\,\vec{u}_{eff}\cdot \nabla\,\phi_j	\\
+&+\sum_i^n\sum_j^nw_iT^{n+\theta}_j\int_{\Omega}\nabla \phi_i\cdot\mathbf{\alpha}_{eff}\nabla \phi_j+\sum_i^n\sum_j^nw_iT^n_j\frac{\Delta t}{2}\int_{\Omega}\nabla\cdot(\phi_i\,\vec{u}_{eff})(\vec{u}_{eff}\cdot\nabla \phi_j)	
+\\
+\\
+\mathcal{L}\big(w_h\big)_h &=\frac{1}{(\rho c )_{eff}}\sum_i^nw_i\int_{\Omega}\bar{Q}^{n+\theta}\phi_i- \Delta t\frac{1}{(\rho c )_{eff}}\sum_i^nw_i\int_{\Omega} \vec{u}_{eff}\cdot  \nabla\,\bar{Q}^{n+\theta}\phi_i		\\
+&-\frac{1}{(\rho c)_{eff}}\sum_i^nw_i\int_{\Gamma}q^{n+\theta}\phi_i
+\end{split}
+\end{equation}
+
+Since the finite dimensional test functions are arbitrary, the equations above are written in matrix form as shown below.
+
+\begin{equation}	\label{h_matrix}
+\frac{\mathbf{M}\{T^{n+1}-T^n\}}{\Delta t}=-\mathbf{C}\{T\}^n-\mathbf{N}\{T\}^n -\mathbf{K}\{T\}^{n+\theta}+\mathbf{f}^{n+\theta}
+\end{equation}
+%
+\begin{equation}	
+\frac{\mathbf{M}\{T^{n+1}-T^n\}}{\Delta t}=-\mathbf{C}\{T\}^n-\mathbf{N}\{T\}^n -\mathbf{K}\big((1-\theta)\{T\}^n+\theta\{T\}^{n+1} \big)+\mathbf{f}^{n+\theta}
+\end{equation}
+
+Where
+\begin{equation}
+\mathbf{M}=\int_{\Omega}\varphi_i\varphi_j 
+\end{equation}
+%
+\begin{equation}
+\mathbf{C}=\int_{\Omega}\phi_i\,\vec{u}_{eff}\cdot \nabla\,\phi_j	
+\end{equation}
+%
+\begin{equation}
+\mathbf{N}=\frac{\Delta t}{2}\int_{\Omega}\nabla\cdot(\phi_i\,\vec{u}_{eff})(\vec{u}_{eff}\cdot\nabla \phi_j)	
+\end{equation}
+%
+\begin{equation}
+\mathbf{K}=\int_{\Omega}\nabla \phi_i\cdot\mathbf{\alpha}_{eff}\nabla \phi_j	
+\end{equation}
+%
+\newline
+\begin{equation}
+\mathbf{f}=\frac{1}{(\rho c )_{eff}}\Big(\int_{\Omega}\bar{Q}\,\phi_i- \Delta t\int_{\Omega}(\vec{u}_{eff}\cdot  \nabla\bar{Q})\phi_i-\int_{\Gamma}q\,\phi_i\Big)	
+\end{equation}
+
+Discrete properties defined at time step $n+\theta$ will be simplified using the theta method as defined below. 
+\begin{equation}
+\mathbf{X}^{n+\theta}=(1-\theta)\mathbf{X}^n+\theta\mathbf{X}^{n+1}
+\end{equation}
+
+Eqn. \ref{h_matrix} becomes
+%
+\begin{equation}	\label{h_matrix1}
+(\mathbf{M}+\theta\,\Delta t\,\mathbf{K}) \{T\}^{n+1}=\big(\mathbf{M}-\Delta t\big(\mathbf{C}+\mathbf{N} +(1-\theta)\mathbf{K}\big) \{T\}^n +\Delta t(1-\theta)\mathbf{f}^n +\Delta t\,\theta\,\mathbf{f}^{n+1}
+\end{equation}
+Thus, once all the matrices defined in Eqns. \ref{h_matrix1} are assembled, solution to the advection-diffusion heat transfer model is obtained by solving the discretized Eqn. \ref{h_matrix1}. 
+\section{Alternative implementation}
+As seen in Eqn. \ref{h_matrix}, the form of the discrete advection-diffusion equation as directly derived using the characteristic-Galerkin and generalized trapezoidal methods does not allow for implementation of the advection and stabilization terms using the $\theta$ method. We propose an alternative method by replacing the advection and stabilization terms implemented at time step $n$ with corresponding terms implemented at time step $n+\theta$. Thus, eqn. \ref{h_matrix} becomes
+
+\begin{equation}	
+\frac{\mathbf{M}\{T^{n+1}-T^n\}}{\Delta t}=-\mathbf{C}\{T\}^{n+\theta}-\mathbf{N}\{T\}^{n+\theta} -\mathbf{K}\{T\}^{n+\theta}+\mathbf{f}^{n+\theta}
+\end{equation}
+\\
+%
+\begin{equation}	
+\frac{\mathbf{M}\{T^{n+1}-T^n\}}{\Delta t}=-\mathbf{C}\{(1-\theta)\,T^n+\theta \, T^{n+1} \}-\mathbf{N}\{(1-\theta)\,T^n+\theta \, T^{n+1} \} -\mathbf{K}\{(1-\theta)\,T^n+\theta \, T^{n+1} \}+\mathbf{f}^{n+\theta}
+\end{equation}
+%
+\\
+\begin{equation}	
+\{\mathbf{M}+\theta\,\Delta t\,(\mathbf{K}+\mathbf{C}+\mathbf{N}\}\, T^{n+1}=\{\mathbf{M}-\Delta t\,(1-\theta)\,(\mathbf{K}+\mathbf{C}+\mathbf{N}\}\, T^{n} +\Delta t(1-\theta)\mathbf{f}^n +\Delta t\,\theta\,\mathbf{f}^{n+1}
+\end{equation}
+
+
+\newpage
+\begin{center}
+\begin{table}
+\caption[Heat variables and units]{Heat variables and units}\label{heat_vtable}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Quantity} & Symbol & Field unit & Metric unit 		\\
+\toprule
+Heat flux & $q$ & $W/m^{2}$ & $Btu/ (h \cdot ft^2)$	\\
+Specific heat & $c$ & $J/(kg\cdot {}^\circ C)$ & $Btu/(lb_m\cdot {}^\circ F)$	\\
+Temperature & $T$ & ${}^\circ C$& ${}^\circ F$	\\
+Specific enthalpy & $h$ & $J/kg$ & $Btu/lb_m$			\\
+Volumetric heat rate & $\bar{q}$ & $W/m^{3}$ & $Btu/ (h \cdot ft^3)$	\\
+Effective thermal conductivity tensor & $\mathbf{\chi}$ & $W/ (m \cdot {}^\circ C)$ & $Btu/ (h \cdot ft\cdot {}^\circ F)$ 	\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\end{center}
+
+
+
+

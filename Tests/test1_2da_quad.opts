@@ -1,0 +1,9 @@
+-dim 2 
+-meshfilename 2dmesh_quad.msh 
+-ubc 
+-ubc_numlabels 4 
+-UBC_labels 1,2,3,4
+-Ubc_Componentsperlabel 1,2,1,2
+-Ubc_Components 0,0,1,0,0,1 
+-Ubc_values 0,0,-0.2,0,0,0
+-elementtype QUADRILATERAL

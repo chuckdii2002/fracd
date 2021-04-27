@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Equilibrium Equation}{1}
+\contentsline {section}{\numberline {2}Boundary Condition}{2}
+\contentsline {section}{\numberline {3}Finite Element Implementation}{2}
+\contentsline {section}{\numberline {4}Computation of Sub-Matrices}{3}
+\contentsline {subsection}{\numberline {4.1}Computation of K Matrix}{4}
+\contentsline {subsection}{\numberline {4.2}Computation of K Matrix}{6}
+\contentsline {subsection}{\numberline {4.3}Computation of K Matrix}{6}
+\contentsline {subsection}{\numberline {4.4}Computation of H Matrix}{6}
+\contentsline {subsection}{\numberline {4.5}Computation of K Matrix: Plain Strain}{6}
+\contentsline {subsection}{\numberline {4.6}Computation of K Matrix: Plain Stress}{8}
+\contentsline {section}{\numberline {5}Thermal fracturing}{9}
+\contentsline {section}{\numberline {6}Advection-Diffusion Heat Equation}{10}
+\contentsline {subsection}{\numberline {6.1}Boundary conditions}{10}
+\contentsline {subsubsection}{\numberline {6.1.1}Temperature BC}{11}
+\contentsline {subsubsection}{\numberline {6.1.2}Heat flux BC}{11}
+\contentsline {section}{\numberline {7}Control Volume Finite Element Implementation of Heat Equation}{11}
+\contentsline {section}{\numberline {8}Two Phase Flow Reservoir Model}{12}
+\contentsline {subsection}{\numberline {8.1}Fully Implicit}{13}
+\contentsline {section}{\numberline {9}Three Phase Flow Reservoir Model}{15}
+\contentsline {chapter}{Bibliography \unhbox \voidb@x \cleaders \hbox to.44em{\hss .\hss }\hfill \kern \z@ }{17}

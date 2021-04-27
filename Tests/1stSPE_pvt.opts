@@ -1,0 +1,37 @@
+-water_FVFmodel ANALYTICAL
+-water_viscmodel ANALYTICAL
+-water_densmodel ANALYTICAL
+-water_refFVF 1.0142
+-water_compress 3e-6
+-water_preffvf 14.7
+-water_refvisc 0.96
+-water_visccoeff 0.
+-water_prefvisc 14.7
+-water_refdens 1.0
+-water_denscoeff 0.
+-water_prefdens 0.
+-oil_FVFmodel INTERPOLATION
+-oil_viscmodel INTERPOLATION
+-oil_densmodel INTERPOLATION
+-oil_FVFmodel ANALYTICAL_AND_INTERPOLATION
+-oil_viscmodel ANALYTICAL_AND_INTERPOLATION
+-oil_densmodel ANALYTICAL_AND_INTERPOLATION
+-oil_refFVF 1.14
+-oil_compress 1e-5
+-oil_refvisc 1.19
+-oil_visccoeff 4e-6
+-oil_denscoeff 0.
+-oil_prefdens -3000
+-oil_preffvf -3000
+-oil_prefvisc -3000
+-oil_PVTfilename 1stSPE_oil_pvt.txt
+-PcowInrelPermData
+-oilwaterrelpermfilename owrelperm1.txt
+-gas_FVFmodel INTERPOLATION
+-gas_viscmodel INTERPOLATION
+-gas_densmodel INTERPOLATION
+-gas_PVTfilename 1stSPE_gas_pvt.txt
+-PcogInrelPermData
+-gasoilrelpermfilename ogrelperm.txt
+-bubblepointfilename bubblepoint.txt
+-RsBubblepointfilename solutiongas.txt

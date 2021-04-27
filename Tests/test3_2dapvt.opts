@@ -1,0 +1,26 @@
+-water_FVFmodel INTERPOLATION
+-water_viscmodel INTERPOLATION
+-water_densmodel INTERPOLATION
+-water_FVFmodel ANALYTICAL
+-water_viscmodel ANALYTICAL
+-water_densmodel ANALYTICAL
+-water_refFVF 1.0
+-water_compress 1.0
+-water_preffvf 0.
+-water_refvisc 1.0
+-water_visccoeff 0.
+-water_prefvisc 0.
+-water_refdens 1.0
+-water_denscoeff 0.
+-water_prefdens 0.
+-water_PVTfilename oilpvt.txt
+-oil_FVFmodel INTERPOLATION
+-oil_viscmodel INTERPOLATION
+-oil_densmodel INTERPOLATION
+-oil_PVTfilename oilpvt.txt
+-PcowInrelPermData
+-oilwaterrelpermfilename wateroilrelperm.txt
+-oilwatercappressfilename pcowdata.txt
+-PcogInrelPermData
+-gasoilrelpermfilename gasoilrelperm.txt
+-gasoilcappressfilename pcogdata.txt

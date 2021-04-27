@@ -1,0 +1,17 @@
+-dim 2 
+-meshfilename 2dmesh.msh 
+-ubc 
+-ubc_numlabels 3 
+-UBC_labels 1,3,4
+-Ubc_Componentsperlabel 1,1,2
+-Ubc_Components 0,0,0,1 
+-Ubc_values 0,0,0,0
+-tractionbc 
+-tractionbc_numlabels 1 
+-tractionbc_labels 2
+-tractionbc_Componentsperlabel 2
+-tractionbc_Components 0,1 
+-tractionbc_values 0,-0.2
+-elasticity2dtype planestress
+-elasticity2dtype planestrain
+-elementtype TRIANGLE

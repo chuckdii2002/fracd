@@ -1,0 +1,1164 @@
+\documentclass[12pt]{article}
+\usepackage{multirow} % Needed for table
+\usepackage{amsmath,amsthm,amssymb,latexsym,amscd}
+\usepackage{amsmath, amssymb, bm}       %bold greeks
+\usepackage{float, graphicx} %SK
+\usepackage{achicago}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{mathtext}
+\usepackage{textcomp}
+
+\usepackage{subfigure} % If you want to group several picures together.
+
+%\oddsidemargin=.6in \textwidth=5.8 in \topmargin=-0.4in
+%\textheight=8.9 in \footskip=0.72in \headheight=12pt \headsep=10pt
+%\begin{thebibliography}{}\setlength{\itemsep}{4mm}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=0.8in]{geometry} % SK
+
+\author{Chukwudi Chukwudozie}
+\title{Development of geomechanics, heat transfer and fluid flow numerical models}
+\begin{document}
+\pagenumbering{roman} 
+\date{}
+\maketitle
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+%\section{Coupling Fluid Flow and Geomechanics: Consolidation}
+
+%\section{Development of fully coupled reservoir flow and deformation simulator using finite element solution method}
+
+\section{Equilibrium Equation}
+Considering a cubic element of rock, the average stress condition in the reservoir rock is represented by forces distributed uniformly  on the faces of the cube. The corresponding stress components are
+\newline
+\begin{gather}		\label{eq4}
+\sigma = \left[
+\begin{array}{ccc}
+\sigma_x & \sigma_{xy} & \sigma_{xz} 	\\
+\sigma_{xy} & \sigma_y & \sigma_{yz}	\\
+\sigma_{xz} & \sigma_{yz} & \sigma_z
+\end{array}
+\right]
+\end{gather}
+\newline
+The stress state in the rock must satisfy the equilibrium equation as given below.
+%
+\begin{equation}			\label{eq5}
+\nabla\cdot\sigma+\vec{f}=0
+\end{equation}
+In component form is given as,
+ \begin{equation}				\label{eq6}				
+ \begin{split}
+\frac{\partial \sigma_x}{\partial x} + \frac{\partial \sigma _{xy}}{\partial y} + \frac{\partial \sigma _{xz}}{\partial z} + f_x = 0		\\
+ %
+\frac{\partial \sigma_{xy}}{\partial x} + \frac{\partial \sigma _y}{\partial y} + \frac{\partial \sigma _{yz}}{\partial z} + f_y = 0		\\
+%
+\frac{\partial \sigma_{xz}}{\partial x} + \frac{\partial \sigma _{yz}}{\partial y} + \frac{\partial \sigma _z}{\partial z} + f_z = 0	
+\end{split}
+\end{equation}
+%
+In addition, relative deformation in the rock is characterized by the strain tensor with components as
+\newline
+\begin{gather}				\label{eq7}
+\epsilon = \left[
+\begin{array}{ccc}
+\epsilon_x & \epsilon_{xy} & \epsilon_{xz} 	\\
+\epsilon_{xy} & \epsilon_y & \epsilon_{yz}		\\
+\epsilon_{xz} & \epsilon_{yz} & \epsilon_z
+\end{array}
+\right]
+\end{gather}
+\newline
+The strain components are
+%
+ \begin{equation}			\label{eq8}		
+ \begin{split}
+\epsilon_x = \frac{\partial u}{\partial x}, \qquad	\epsilon_{xy}=\frac{1}{2}\big(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\big)=0.5\gamma_{xy}	\\
+ %
+\epsilon_y = \frac{\partial v}{\partial y}, \qquad	\epsilon_{yz}=\frac{1}{2}\big(\frac{\partial v}{\partial z}+\frac{\partial w}{\partial y}\big)=0.5\gamma_{yz}	\\
+%
+\epsilon_z = \frac{\partial w}{\partial z}, \qquad	\epsilon_{xz}=\frac{1}{2}\big(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x}\big)	=0.5\gamma_{xz}
+\end{split}
+\end{equation}
+%
+In index form, the infinitesimal strain can be written as
+%
+\begin{equation}		\label{eq9}
+\epsilon_{i,j} = \frac{1}{2}\Big(u_{i,j}+u_{j,i}\Big)
+\end{equation}
+%
+Considering Biot's concept of effective stress in which stress is considered to composed of two parts: one which is caused by the hydrostatic pressure of water filling the reservoir pores, and the other caused by average stress in the solid skeleton. Mathematically, it is written as
+%
+\begin{equation}		\label{eq10}
+\sigma = \sigma^{\prime} -\beta pI -\alpha(3\lambda+2\mu)(T-T_o)I\quad \Rightarrow \quad \sigma_{ij}=\sigma^{\prime}_{ij}-\beta  p \delta_{ij}-\alpha(3\lambda+2\mu)I(T-T_o)\delta_{ij}
+\end{equation}
+$\sigma, \sigma^{\prime},\beta, \alpha$ and and $p$ are the total stress, effective stress, Biot's coefficient, coefficient of linear expansion and pore pressure respectively. 
+%
+The effective stress is now related to the strain by the generalized elasticity equation given below.
+%
+\begin{equation}		\label{eq12}
+\begin{split}
+\sigma^{\prime}_x=\lambda \epsilon_{vol} + 2\mu\epsilon_x \quad \sigma^{\prime}_{xy}= 2\mu\epsilon_{xy} \\
+ \sigma^{\prime}_y= \lambda\epsilon_{vol} + 2\mu\epsilon_y \quad \sigma^{\prime}_{yz}= 2\mu\epsilon_{yz}	\\
+\sigma^{\prime}_z= \lambda\epsilon_{vol} + 2\mu\epsilon_z \quad \sigma^{\prime}_{xz}= 2\mu\epsilon_{xz}	
+\end{split}
+\end{equation}
+%
+Where $\epsilon_{vol} = \epsilon_x+\epsilon_y+\epsilon_z=\nabla\cdot\vec{u}$. Eqn. \ref{eq12} in index form is
+%
+\begin{equation}	\label{eq13}
+\sigma_{ij}^{\prime}=2\mu\epsilon_{ij}+\lambda\epsilon_{kk}\delta_{ij}
+\end{equation}
+%
+\begin{equation}	\label{eq14}
+\begin{split}
+\sigma^{\prime}_{ij}&=\mu(u_{i,j} + u_{j,i})+\lambda u_{k,k}\delta_{ij}	\\
+&=D_eL\vec{u}
+\end{split}
+\end{equation}
+%
+\section{Boundary Condition}
+\section{Finite Element Implementation}
+The weak formulation of the equilibrium equation is obtained by introducing a vector test function $\vec{v}$. Eqn. \ref{eq5} is multiplied by $\vec{v}$ and integrated over the whole domain as given below.
+%
+\begin{equation}	\label{eq22}
+\int_\Omega(\nabla\cdot\sigma)\cdot\vec{v}+\int_\Omega\vec{f}\cdot\vec{v}=0
+\end{equation}
+\newline
+Upon integration by parts, Eqn. \ref{eq22} becomes
+%
+\begin{equation}	\label{eq23}
+\int_\Omega\nabla \vec{v}:\sigma=\int_\Gamma\vec{v}\cdot\sigma\cdot\vec{n}+\int_\Omega\rho\vec{g}\cdot\vec{v}
+\end{equation}
+%
+\begin{equation}	\label{eq24}
+\int_\Omega(L\vec{v})^T\sigma=\int_\Gamma\vec{v}\cdot t_n+\int_\Omega\rho\vec{g}\cdot\vec{v}
+\end{equation}
+%
+Substituting Eqns. \ref{eq10}, we obtain,
+
+\begin{equation}	\label{eq27}
+\int_\Omega(L\vec{v})^T\sigma=\int_\Gamma\vec{v}^T\cdot t_n+\int_\Omega\rho\vec{v}^T\vec{g}
+\end{equation}
+%
+\begin{equation}	\label{eq28}
+\begin{split}
+\int_\Omega(L\vec{v})^T(\sigma^\prime-\alpha m \varphi_p\bar{p})=\int_\Gamma\vec{v}^T\cdot t_n+\int_\Omega\rho\vec{v}^T\vec{g}	\\
+\int_\Omega(L\vec{v})^T\sigma^\prime-\alpha\int_\Omega(L\vec{v})^T m \varphi_p\bar{p}=\int_\Gamma\vec{v}^T\cdot t_n+\int_\Omega\rho\vec{v}^T\vec{g}
+\end{split}
+\end{equation}
+%
+By applying the Galerkin method, $\vec{u}$ and the test function $\vec{v}$ are written as a linear combinations of the shape functions ${\varphi}$ respectively, as below.
+%
+\begin{equation}	
+\begin{split}	\label{eq25}
+\vec{u} &= \sum \varphi \vec{\bar{u}}=N_{\varphi}\vec{\bar{u}}	\\
+\vec{v} &= \sum \varphi \vec{\bar{v}}=N_{\varphi}\vec{\bar{v}}	\\
+\vec{p} &= \sum \varphi \bar{p}
+\end{split}
+\end{equation}
+%
+Substituting Eqn. \ref{eq25} into Eqn. \ref{eq28}
+%
+\begin{equation}	\label{eq28a}
+\begin{split}
+\int_\Omega(LN_\varphi)^T\sigma^\prime-\alpha\int_\Omega(LN_\varphi)^T m \varphi\bar{p}=\int_\Gamma N_\varphi t_n+\int_\Omega\rho N_\varphi\vec{g}
+\end{split}
+\end{equation}
+%
+But
+%
+\begin{equation}
+\sigma^\prime=D_e\epsilon=D_eL\vec{u}=D_eLN_{\varphi}\bar{u}=D_eB\vec{\bar{u}}
+\end{equation}
+%
+\newline
+Where $B=LN_{\varphi}$
+\newline
+\newline
+Hence, Eqn. \ref{eq28a} becomes
+%
+\begin{equation}	\label{eq29}
+\int_\Omega B^TD_eB\bar{u}-\int_\Omega B^T\alpha m \varphi_p\bar{p}=\int_\Gamma N_{\varphi} t_n+\int_\Omega\rho N_{\varphi}\vec{g}
+\end{equation}
+\newline
+Since, the finite element nodal $\bar{u} \text{ and } \bar{p}$ are constants, Eqn. \ref{eq29} can be written as
+\newline
+\begin{equation}	\label{eq30a}
+\textbf{K}\bar{u}-\textbf{Q}\bar{p} = \textbf{f}_u
+\end{equation}
+\newline
+Where
+%
+\begin{equation}
+\begin{split}
+\textbf{K} &= \int_\Omega B^TD_eB	\\
+\textbf{Q} &= \int_\Omega B^T\alpha m \varphi_p	\\
+\textbf{f}_u &= \int_\Gamma\vec{\varphi}^T_u\cdot t_n+\int_\Omega\rho\vec{\varphi}^T_u\vec{g}
+\end{split}
+\end{equation}
+\newline
+%%
+\section{Computation of Sub-Matrices}
+Block matrices of the coupled problem requires certain matrix building blocks. These matrices and their coefficients are defined below.
+%
+\begin{equation}	\label{eq42b}
+m^T=\left[
+\begin{array}{cccccc}
+1&1&1&0&0&0
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq43}
+L = \left[
+\begin{array}{ccc}
+\frac{\partial}{\partial x} & 0 & 0  			\\
+0 &\frac{\partial}{\partial y} & 0  				\\
+0 & 0 &\frac{\partial}{\partial z} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x} & 0  			\\
+0 & \frac{\partial}{\partial z} & \frac{\partial}{\partial y}  			\\
+\frac{\partial}{\partial z} & 0 & \frac{\partial}{\partial x}  			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq44}
+N_{\varphi} =\left[
+\begin{array}{ccc}
+\varphi & 0 & 0  			\\
+0 &\varphi & 0  				\\
+0 & 0 &\varphi				
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq45}
+D_e = 
+\left[
+\begin{array}{cccccc}
+\lambda+2\mu & \lambda & \lambda & 0 & 0 & 0 			\\
+\lambda & \lambda+2\mu & \lambda & 0 & 0 & 0 			\\
+\lambda & \lambda & \lambda+2\mu & 0 & 0 & 0 			\\
+0 & 0 & 0 & \mu & 0 & 0 			\\
+0 & 0 & 0 & 0 &  \mu & 0 			\\
+0 & 0 & 0 & 0 & 0 &  \mu 			\\
+\end{array}
+\right]
+\end{equation}
+\newline
+\newline
+%
+\newline
+\begin{equation}		\label{eq46}
+B=LN_{\varphi}=\left[
+\begin{array}{ccc}
+\frac{\partial}{\partial x} & 0 & 0  			\\
+0 &\frac{\partial}{\partial y} & 0  				\\
+0 & 0 &\frac{\partial}{\partial z} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x} & 0  			\\
+0 & \frac{\partial}{\partial z} & \frac{\partial}{\partial y}  			\\
+\frac{\partial}{\partial z} & 0 & \frac{\partial}{\partial x}  			\\
+\end{array}
+\right]
+%
+\left[
+\begin{array}{ccc}
+\varphi & 0 & 0  			\\
+0 &\varphi & 0  				\\
+0 & 0 &\varphi				
+\end{array}
+\right]
+=
+\left[
+\begin{array}{ccc}
+\frac{\partial \varphi}{\partial x} & 0 & 0  			\\
+0 &\frac{\partial \varphi}{\partial y} & 0  				\\
+0 & 0 &\frac{\partial \varphi}{\partial z} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x} & 0  			\\
+0 & \frac{\partial \varphi}{\partial z} & \frac{\partial \varphi}{\partial y}  			\\
+\frac{\partial \varphi}{\partial z} & 0 & \frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq47}
+\begin{split}
+D_eB& = \left[
+\begin{array}{cccccc}
+\lambda+2\mu & \lambda & \lambda & 0 & 0 & 0 			\\
+\lambda & \lambda+2\mu & \lambda & 0 & 0 & 0 			\\
+\lambda & \lambda & \lambda+2\mu & 0 & 0 & 0 			\\
+0 & 0 & 0 & \mu & 0 & 0 			\\
+0 & 0 & 0 & 0 &  \mu & 0 			\\
+0 & 0 & 0 & 0 & 0 &  \mu 			\\
+\end{array}
+\right]
+%
+\left[
+\begin{array}{ccc}
+\frac{\partial \varphi}{\partial x} & 0 & 0  			\\
+0 &\frac{\partial \varphi}{\partial y} & 0  				\\
+0 & 0 &\frac{\partial \varphi}{\partial z} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x} & 0  			\\
+0 & \frac{\partial \varphi}{\partial z} & \frac{\partial \varphi}{\partial y}  			\\
+\frac{\partial \varphi}{\partial z} & 0 & \frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]	\\
+%
+& \qquad=
+\left[
+\begin{array}{ccc}
+(\lambda+2\mu)\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y} & \lambda\frac{\partial \varphi}{\partial z}  			\\
+\lambda\frac{\partial \varphi}{\partial x} &(\lambda+2\mu)\frac{\partial \varphi}{\partial y} & v\frac{\partial \varphi}{\partial z}  				\\
+\lambda\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y} &(\lambda+2\mu)\frac{\partial \varphi}{\partial z}				\\
+\mu\frac{\partial \varphi}{\partial y} & \mu\frac{\partial \varphi}{\partial x} & 0  			\\
+0 & \mu\frac{\partial \varphi}{\partial z} & \mu\frac{\partial \varphi}{\partial y}  			\\
+\mu\frac{\partial \varphi}{\partial z} & 0 & \mu\frac{\partial \varphi}{\partial x} 
+\end{array}
+\right]
+\end{split}
+\end{equation}
+%%%%%%%
+\subsection{Computation of K Matrix}
+%
+\begin{equation}	\label{eq48}
+\mathbf{K}=\sum_{\Omega_e}\mathbf{K}_e
+\end{equation}
+%
+\begin{equation}	\label{eq49}
+\begin{split}
+\mathbf{K}_e&=\int_{\Omega_e}B^TD_eB	\\
+&= 
+\left[
+\begin{array}{cccccc}
+\frac{\partial \varphi_i}{\partial x} & 0 & 0  &\frac{\partial \varphi_i}{\partial y}&0&\frac{\partial \varphi_i}{\partial z}			\\
+0 &\frac{\partial \varphi_i}{\partial y} & 0  	&\frac{\partial \varphi_i}{\partial x}&\frac{\partial \varphi_i}{\partial z}&0			\\
+0 & 0 &\frac{\partial \varphi_i}{\partial z} 	&0&\frac{\partial \varphi_i}{\partial y}&\frac{\partial \varphi_i}{\partial x}			
+\end{array}
+\right]
+%
+\left[
+\begin{array}{ccc}
+(\lambda+2\mu)\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y} & \lambda\frac{\partial \varphi}{\partial z}  			\\
+\lambda\frac{\partial \varphi}{\partial x} &(\lambda+2\mu)\frac{\partial \varphi}{\partial y} & \lambda\frac{\partial \varphi}{\partial z}  				\\
+\lambda\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y} &(\lambda+2\mu)\frac{\partial \varphi}{\partial z}				\\
+\mu\frac{\partial \varphi}{\partial y} & \mu\frac{\partial \varphi}{\partial x} & 0  			\\
+0 & \mu\frac{\partial \varphi}{\partial z} & \mu\frac{\partial \varphi}{\partial y}  			\\
+\mu\frac{\partial \varphi}{\partial z} & 0 & \mu\frac{\partial \varphi}{\partial x} 
+\end{array}
+\right]	\\	\\	\\
+%
+\hskip-15pt
+&=
+\left[
+\begin{array}{lll}
+(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z}& \lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}  & \lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial z} + \mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial x}   			\\
+%
+\lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y}   & (\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x} + \mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z} & \lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial z}+\mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial y}  				\\
+%
+\lambda\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial x} +\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial z}& \lambda\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial z} &(\lambda+2\mu)\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}\end{array}
+\right]	
+\end{split}
+\end{equation}
+%%%%%
+\begin{equation}		\label{eq50}
+\begin{split}
+\mathbf{K}_{e_u}&=\int_{\Omega_e}\Bigg[(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z}\Bigg]	\\
+%
+\mathbf{K}_{e_{uv}}&=\int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}\Bigg]	\\
+%
+\mathbf{K}_{e_{uw}}&= \int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial z} +\mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial x}\Bigg]	\\
+%
+\mathbf{K}_{e_{vu}}&= \int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y}\Bigg] 		\\
+%
+\mathbf{K}_{e_{v}}&=\int_{\Omega_e}\Bigg[(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x} + \mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z}\Bigg]		\\
+%
+\mathbf{K}_{e_{vw}}&=\int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial z}+\mu\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial y}\Bigg] 		\\
+%
+\mathbf{K}_{e_{wu}}&=\int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial x} +\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial z}\Bigg] 		\\
+%
+\mathbf{K}_{e_{wv}}&=\int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial z}\Bigg] 		\\
+%
+\mathbf{K}_{e_{w}}&=\int_{\Omega_e}\Bigg[(\lambda+2\mu)\frac{\partial \varphi_i}{\partial z}\frac{\partial \varphi_j}{\partial z}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}\Bigg]
+\end{split}
+\end{equation}
+%%%%%%%
+\subsection{Computation of K Matrix}
+
+\begin{equation}
+\begin{split}
+\mathbf{Q}&=\int_{\Omega_e}B^T\alpha m \varphi	\\
+%
+&=\alpha\int_{\Omega_e}\left[
+\begin{array}{cccccc}
+\frac{\partial \varphi_i}{\partial x} & 0 & 0  &\frac{\partial \varphi_i}{\partial y}&0&\frac{\partial \varphi_i}{\partial z}			\\
+0 &\frac{\partial \varphi_i}{\partial y} & 0  	&\frac{\partial \varphi_i}{\partial x}&\frac{\partial \varphi_i}{\partial z}&0			\\
+0 & 0 &\frac{\partial \varphi_i}{\partial z} 	&0&\frac{\partial \varphi_i}{\partial y}&\frac{\partial \varphi_i}{\partial x}			
+\end{array}
+\right]
+%
+\left[
+\begin{array}{c}
+1	\\
+1	\\
+1	\\
+0	\\
+0	\\
+0
+\end{array}	
+\right]\varphi_j	\\
+%
+&=\alpha\int_{\Omega_e}
+\left[
+\begin{array}{c}
+\frac{\partial \varphi_i}{\partial x}\varphi_j	\\
+\frac{\partial \varphi_i}{\partial y}\varphi_j	\\
+\frac{\partial \varphi_i}{\partial z}\varphi_j
+\end{array}	
+\right]
+\end{split}
+\end{equation}
+\newline
+Thus,
+\newline
+\begin{equation}
+\mathbf{Q^T}=\alpha\int_{\Omega_e}
+\left[
+\begin{array}{ccc}
+\varphi_i\frac{\partial \varphi_j}{\partial x}	&\varphi_i\frac{\partial \varphi_j}{\partial y}&
+\varphi_i\frac{\partial \varphi_j}{\partial z}
+\end{array}	
+\right]
+\end{equation}
+%%%%%%%%%
+\subsection{Computation of K Matrix}
+
+\begin{equation}
+\mathbf{S}_e=\frac{1}{M}\int_{\Omega_e}\varphi_i\varphi_j
+\end{equation}
+%%%%%%%%
+\subsection{Computation of H Matrix}
+
+\begin{equation}
+\begin{split}
+\mathbf{H}_e&=\int_{\Omega_e}\nabla \varphi^T\frac{K}{\mu}\nabla \varphi	\\
+%
+&=\frac{1}{\mu}\int_{\Omega_e}
+%
+\left[
+\begin{array}{ccc}
+\frac{\partial \varphi_i}{\partial x} &\frac{\partial \varphi_i}{\partial y}&
+\frac{\partial \varphi_i}{\partial z}
+\end{array}	
+\right]
+%
+\left[
+\begin{array}{ccc}
+k_x &k_{xy}&k_{xz}	\\
+k_{xy}&k_y&k_{yz}	\\
+k_{xz}&k_{yz}&k_z
+\end{array}	
+\right]
+%
+\left[
+\begin{array}{c}
+\frac{\partial \varphi_j}{\partial x} 	\\
+\frac{\partial \varphi_j}{\partial y}	\\
+\frac{\partial \varphi_j}{\partial z}
+\end{array}	
+\right]	\\
+&=
+\frac{1}{\mu}\int_{\Omega_e}\Bigg[\frac{\partial \varphi_i}{\partial x}\Big(k_x\frac{\partial \varphi_j}{\partial x}+k_{xy}\frac{\partial \varphi_j}{\partial y}+k_{xz}\frac{\partial \varphi_j}{\partial z}\Big)+
+%
+\frac{\partial \varphi_i}{\partial y}\Big(k_{xy}\frac{\partial \varphi_j}{\partial x}+k_{y}\frac{\partial \varphi_j}{\partial y}+k_{yz}\frac{\partial \varphi_j}{\partial z}\Big)	\\
+%
+& \qquad +\frac{\partial \varphi_i}{\partial z}\Big(k_{xz}\frac{\partial \varphi_j}{\partial x}+k_{yz}\frac{\partial \varphi_j}{\partial y}+k_{z}\frac{\partial \varphi_j}{\partial z}\Big)
+\Bigg]
+\end{split}
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Computation of K Matrix: Plain Strain}
+
+In plain strain, $\epsilon_z = \epsilon_{xz}= \epsilon_{yz} = 0$. 
+
+
+Block matrices of the coupled problem requires certain matrix building blocks. These matrices and their coefficients are defined below.
+%
+\begin{equation}	\label{eq42ba}
+m^T=\left[
+\begin{array}{cccccc}
+1&1&0&0
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq43a}
+L = \left[
+\begin{array}{cc}
+\frac{\partial}{\partial x} & 0   			\\
+0 &\frac{\partial}{\partial y} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x}   			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq44a}
+N_{\varphi} =\left[
+\begin{array}{cc}
+\varphi & 0   			\\
+0 &\varphi  				\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq45a}
+D_e = 
+\left[
+\begin{array}{ccc}
+\lambda+2\mu & \lambda & 0 			\\
+\lambda & \lambda+2\mu & 0 			\\
+0 & 0 & \mu 		
+\end{array}
+\right]
+\end{equation}
+\newline
+\newline
+%
+\newline
+\begin{equation}		\label{eq46a}
+B=LN_{\varphi}= \left[
+\begin{array}{cc}
+\frac{\partial}{\partial x} & 0   			\\
+0 &\frac{\partial}{\partial y} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x}   			\\
+\end{array}
+\right]
+%
+\left[
+\begin{array}{cc}
+\varphi & 0  			\\
+0 &\varphi   				
+\end{array}
+\right]
+=
+ \left[
+\begin{array}{cc}
+\frac{\partial \varphi}{\partial x} & 0   			\\
+0 &\frac{\partial \varphi}{\partial y} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x}   			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq47a}
+\begin{split}
+D_eB& = \left[
+\begin{array}{ccc}
+\lambda+2\mu & \lambda & 0 			\\
+\lambda & \lambda+2\mu & 0 			\\
+0 & 0 & \mu 		
+\end{array}
+\right]
+%
+ \left[
+\begin{array}{cc}
+\frac{\partial \varphi}{\partial x} & 0   			\\
+0 &\frac{\partial \varphi}{\partial y} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x}   			\\
+\end{array}
+\right]	\\
+%
+& \qquad=
+\left[
+\begin{array}{cc}
+(\lambda+2\mu)\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y}  			\\
+\lambda\frac{\partial \varphi}{\partial x} &	(\lambda+2\mu)\frac{\partial \varphi}{\partial y} 			\\
+\mu\frac{\partial \varphi}{\partial y} & \mu\frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]
+\end{split}
+\end{equation}
+
+
+%
+\begin{equation}	\label{eq48a}
+\mathbf{K}=\sum_{\Omega_e}\mathbf{K}_e
+\end{equation}
+%
+\begin{equation}	\label{eq49a}
+\begin{split}
+\mathbf{K}_e&=\int_{\Omega_e}B^TD_eB	\\
+&= 
+ \left[
+\begin{array}{ccc}
+\frac{\partial \varphi}{\partial x} & 0  &   \frac{\partial \varphi}{\partial y}			\\
+0 &\frac{\partial \varphi}{\partial y} 	& \frac{\partial \varphi}{\partial x}			
+\end{array}
+\right]
+%
+\left[
+\begin{array}{cc}
+(\lambda+2\mu)\frac{\partial \varphi}{\partial x} & \lambda\frac{\partial \varphi}{\partial y}  			\\
+\lambda\frac{\partial \varphi}{\partial x} &	(\lambda+2\mu)\frac{\partial \varphi}{\partial y} 			\\
+\mu\frac{\partial \varphi}{\partial y} & \mu\frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]	\\	\\	\\
+%
+&=
+\left[
+\begin{array}{cc}
+(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} & \lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}  	\\
+%
+\lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y}   & (\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}  \\
+\end{array}
+\right]	
+\end{split}
+\end{equation}
+%%%%%
+\begin{equation}		\label{eq50a}
+\begin{split}
+\mathbf{K}_{u}&=\int_{\Omega_e}\Bigg[(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} \Bigg]	\\
+%
+\mathbf{K}_{{uv}}&=\int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}\Bigg]	\\
+%
+%
+\mathbf{K}_{{vu}}&= \int_{\Omega_e}\Bigg[\lambda\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y}\Bigg] 		\\
+%
+\mathbf{K}_{{v}}&=\int_{\Omega_e}\Bigg[(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x} \Bigg]		\\
+\end{split}
+\end{equation}
+
+
+\subsection{Computation of K Matrix: Plain Stress}
+In plain stress, $\sigma_z = \sigma_{xz}= \sigma_{yz} = 0$. Therefore, from Equation \ref{eq14}, the remaining equations are written as
+
+\begin{equation}
+\begin{split}
+\sigma_{x} &= (\lambda+2\mu)\epsilon_x+\lambda\epsilon_y+\lambda\epsilon_z	\\
+\sigma_{y} &= \lambda\epsilon_x+(\lambda+2\mu)\epsilon_y+\lambda\epsilon_z	\\
+\sigma_{z} = 0 &= \lambda\epsilon_x+\lambda\epsilon_y+(\lambda+2\mu)\epsilon_z	\to \epsilon_z = -\frac{\epsilon_x+\epsilon_y}{\lambda+2\mu} \\
+\sigma_{x} &= \mu\gamma_{xy}
+\end{split}
+\end{equation}
+%
+Upon substituting for $\epsilon_z$ into $\sigma_{x}$ and $\sigma_{y}$, one obtains the following equations
+%
+\begin{equation}
+\begin{split}
+\sigma_{x} &=\frac{1}{\lambda+2\mu}\big[(4\lambda\mu+4\mu^2)\epsilon_x+2\lambda\mu\epsilon_y\big]	\\
+\sigma_{y} &= \frac{1}{\lambda+2\mu}\big[2\lambda\mu\epsilon_x+(4\lambda\mu+4\mu^2)\epsilon_y\big]		\\
+\sigma_{x} &= \mu\gamma_{xy}
+\end{split}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}	\label{eq45b}
+D_e = \frac{1}{\lambda+2\mu}
+\left[
+\begin{array}{ccc}
+4\lambda\mu+4\mu^2 & 2\lambda\mu & 0 			\\
+2\lambda\mu &4\lambda\mu+4\mu^2 & 0 			\\
+0 & 0 & \mu(\lambda+2\mu) 		
+\end{array}
+\right]
+\end{equation}
+%
+Block matrices of the coupled problem requires certain matrix building blocks. These matrices and their coefficients are defined below.
+%
+\begin{equation}	\label{eq42bb}
+m^T=\left[
+\begin{array}{cccccc}
+1&1&&0&0
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq43b}
+L = \left[
+\begin{array}{cc}
+\frac{\partial}{\partial x} & 0   			\\
+0 &\frac{\partial}{\partial y} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x}   			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq44b}
+N_{\varphi} =\left[
+\begin{array}{cc}
+\varphi & 0   			\\
+0 &\varphi  				\\
+\end{array}
+\right]
+\end{equation}
+%
+\newline
+\newline
+%
+\newline
+\begin{equation}		\label{eq46b}
+B=LN_{\varphi}= \left[
+\begin{array}{cc}
+\frac{\partial}{\partial x} & 0   			\\
+0 &\frac{\partial}{\partial y} 				\\
+\frac{\partial}{\partial y} & \frac{\partial}{\partial x}   			\\
+\end{array}
+\right]
+%
+\left[
+\begin{array}{cc}
+\varphi & 0  			\\
+0 &\varphi   				
+\end{array}
+\right]
+=
+ \left[
+\begin{array}{cc}
+\frac{\partial \varphi}{\partial x} & 0   			\\
+0 &\frac{\partial \varphi}{\partial y} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x}   			\\
+\end{array}
+\right]
+\end{equation}
+%
+\begin{equation}	\label{eq47b}
+\begin{split}
+D_eB& = \frac{1}{\lambda+2\mu}
+\left[
+\begin{array}{ccc}
+4\lambda\mu+4\mu^2 & 2\lambda\mu & 0 			\\
+2\lambda\mu &4\lambda\mu+4\mu^2 & 0 			\\
+0 & 0 & \mu(\lambda+2\mu) 		
+\end{array}
+\right]
+%
+ \left[
+\begin{array}{cc}
+\frac{\partial \varphi}{\partial x} & 0   			\\
+0 &\frac{\partial \varphi}{\partial y} 				\\
+\frac{\partial \varphi}{\partial y} & \frac{\partial \varphi}{\partial x}   			\\
+\end{array}
+\right]	\\
+%
+& \qquad= \frac{1}{\lambda+2\mu}
+\left[
+\begin{array}{cc}
+(4\lambda\mu+4\mu^2)\frac{\partial \varphi}{\partial x} & 2\lambda\mu\frac{\partial \varphi}{\partial y}  			\\
+2\lambda\mu\frac{\partial \varphi}{\partial x} &	(4\lambda\mu+4\mu^2)\frac{\partial \varphi}{\partial y} 			\\
+\mu(\lambda+2\mu) \frac{\partial \varphi}{\partial y} & \mu(\lambda+2\mu) \frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]
+\end{split}
+\end{equation}
+%
+\begin{equation}	\label{eq48b}
+\mathbf{K}=\sum_{\Omega_e}\mathbf{K}_e
+\end{equation}
+%
+\begin{equation}	\label{eq49b}
+\begin{split}
+\mathbf{K}_e&=\int_{\Omega_e}B^TD_eB	\\
+&= \frac{1}{\lambda+2\mu}
+ \left[
+\begin{array}{ccc}
+\frac{\partial \varphi}{\partial x} & 0  &   \frac{\partial \varphi}{\partial y}			\\
+0 &\frac{\partial \varphi}{\partial y} 	& \frac{\partial \varphi}{\partial x}			
+\end{array}
+\right]
+%
+\left[
+\begin{array}{cc}
+(4\lambda\mu+4\mu^2)\frac{\partial \varphi}{\partial x} & 2\lambda\mu\frac{\partial \varphi}{\partial y}  			\\
+2\lambda\mu\frac{\partial \varphi}{\partial x} &	(4\lambda\mu+4\mu^2)\frac{\partial \varphi}{\partial y} 			\\
+\mu(\lambda+2\mu) \frac{\partial \varphi}{\partial y} & \mu(\lambda+2\mu) \frac{\partial \varphi}{\partial x}  			\\
+\end{array}
+\right]	\\	\\	\\
+%
+&=\frac{1}{\lambda+2\mu}
+\left[
+\begin{array}{cc}
+(4\lambda\mu+4\mu^2)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} &2 \lambda\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}  	\\
+%
+2\lambda\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y}   & (4\lambda\mu+4\mu^2)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}  \\
+\end{array}
+\right]	
+\end{split}
+\end{equation}
+%%%%%
+\begin{equation}		\label{eq50b}
+\begin{split}
+\mathbf{K}_{u}&=\frac{1}{\lambda+2\mu}\int_{\Omega_e}\Bigg[(4\lambda\mu+4\mu^2)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y} \Bigg]	\\
+%
+\mathbf{K}_{{uv}}&=\frac{1}{\lambda+2\mu}\int_{\Omega_e}\Bigg[2 \lambda\mu\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} + \mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}  \Bigg]	\\
+%
+%
+\mathbf{K}_{{vu}}&= \frac{1}{\lambda+2\mu}\int_{\Omega_e}\Bigg[2\lambda\mu\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial x}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial y} \Bigg] 		\\
+%
+\mathbf{K}_{{v}}&=\frac{1}{\lambda+2\mu}\int_{\Omega_e}\Bigg[(4\lambda\mu+4\mu^2)\frac{\partial \varphi_i}{\partial y}\frac{\partial \varphi_j}{\partial y}+\mu(\lambda+2\mu)\frac{\partial \varphi_i}{\partial x}\frac{\partial \varphi_j}{\partial x} \Bigg]		\\
+\end{split}
+\end{equation}
+
+\section{Thermal fracturing}
+Thermal fracturing occurs during fluid injection operations such as water flooding and other secondary or tertiary recovery processes, when there is a large temperature difference between the injected fluid and formation rock \cite{perkins1,fjaer,settari4}. This temperature difference causes heat transfer between cold injected fluid and hot formation rock, creating a growing region of cooled rock around the well bore as more fluid is injected. As a result, formation rock shrinks as thermoelastic stress is induced causing a reduction in the in-situ stresses. Fractures are induced when the minimum in-situ stress falls below the injection pressure of the fluid and the fracture extent is dependent on the extent of the cooled region in the formation around the well bore.
+
+Fracture formation in the early days of cold fluid injection were considered bad practice which in some cases, happened unexpectedly. With injectivity increase that comes with fracture formation during fluid injection, these operations are now routinely designed to operate at conditions favorable for fracturing. Fluid injection design includes planning for well placements, injection fluid characteristics and reservoir fluid displacement patterns. An important element for studying subsurface fluid displacement patterns is the ability to predict fracture growth under different thermal conditions and the associated fracture characteristics like geometry, similar to the case of conventional hydraulic fracturing. Similar to hydraulic fracturing, thermal fractures open perpendicular to the minimum in-situ stress directions but at lower fluid pressure since formation compressive stresses are reduced by the induced thermal stresses.  As the fracture propagates, the cooling effect of the injected fluid increases the extent of the cooled region around the fracture, inducing thermoelastic stress, which in turn affects fracture growth. Thus, thermal fracturing occurs in association with hydraulic fracturing since any solution of the problem will couple fluid flow and heat transfer models with the fracture mechanics.
+
+In this part of the work, variational fracture model with the fluid flow model earlier described will be coupled with some heat transfer model to solve the thermal fracturing problem. At this time, I have not carried out any significant research in this area. 
+
+
+\section{Advection-Diffusion Heat Equation}
+
+The constitutive relationship for the heat flux is given by Fourier's law as below
+\begin{equation}
+\vec{q}=-\mathbf{\chi}\nabla T
+\end{equation}
+Where $\vec{q}$, $T$ and $\mathbf{K}_T$ are the heat flux, temperature and effective thermal conductivity respectively.
+%
+\begin{equation}	\label{heq}
+(\rho c )_{eff}\frac{\partial T}{\partial t} + \rho_wc_w\nabla\cdot(\vec{u}_w T)-\nabla\cdot(\mathbf{\chi}_{eff}\nabla T)=\bar{q}
+\end{equation}
+%
+where
+\begin{equation}
+\begin{split}
+\mathbf{\chi}_{eff} &= (1-\phi)\mathbf{\chi}_s +\phi\mathbf{\chi}_w		\\
+(\rho c_p )_{eff} &= (1-\phi)\rho_s c_s +\phi\rho_w c_w			\\
+\bar{q} &= (1-\phi)\bar{q}_s+\phi\bar{q}_w
+\end{split}
+\end{equation}
+\subsection{Boundary conditions}
+Appropriate boundary conditions are necessary to complete the problem for unique solution to the heat transfer problem
+\subsubsection{Temperature BC}
+Boundary temperatures are specified
+\subsubsection{Heat flux BC}
+Normal component of heat flux is specified on a boundary. 
+\begin{equation}
+(\vec{u}_wT-\mathbf{\chi}_{eff}\nabla T)\cdot\vec{n}=q
+\end{equation}
+
+
+\section{Control Volume Finite Element Implementation of Heat Equation}
+
+Integrating Equation \ref{heq} over $\Omega$ and applying Gauss-divergence theorem, we have
+
+\begin{equation}	\label{heq1}
+\int_{\Omega}(\rho c )_{eff}\frac{\partial T}{\partial t} + \rho_wc_w\int_{\Omega}\nabla\cdot\big(\vec{u}_w T-\nabla\cdot\mathbf{\chi}_{eff}\nabla T\big)=\int_{\Omega}\bar{q}
+\end{equation}
+%
+\begin{equation}	\label{heq2}
+\int_{\Omega}(\rho c )_{eff}\frac{\partial T}{\partial t} + \rho_wc_w\int_{\Gamma}\big(\vec{u}_w T-\nabla\cdot\mathbf{\chi}_{eff}\nabla T\big)\cdot\vec{n}=\int_{\Omega}\bar{q}
+\end{equation}
+%
+Considering the dual mesh around finite element nodes, we can write the equation above as summation over all the  elements of the dual mesh. That is
+%
+\begin{equation}	\label{heq2}
+(\rho c )_{eff}|\Omega_i|\frac{d T}{d t} + \rho_wc_w\oint_{\Gamma_i}\big(\vec{u}_w T-\nabla\cdot\mathbf{\chi}_{eff}\nabla T\big)\cdot\vec{n}=|\Omega_i|\bar{q}
+\end{equation}
+
+\newpage
+\begin{center}
+\begin{table}
+\caption[Heat variables and units]{Heat variables and units}\label{heat_vtable}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Quantity} & Symbol & Field unit & Metric unit 		\\
+\toprule
+Heat flux & $q$ & $W/m^{2}$ & $Btu/ (h \cdot ft^2)$	\\
+Specific heat & $c$ & $J/(kg\cdot {}^\circ C)$ & $Btu/(lb_m\cdot {}^\circ F)$	\\
+Temperature & $T$ & ${}^\circ C$& ${}^\circ F$	\\
+Specific enthalpy & $h$ & $J/kg$ & $Btu/lb_m$			\\
+Volumetric heat rate & $\bar{q}$ & $W/m^{3}$ & $Btu/ (h \cdot ft^3)$	\\
+Effective thermal conductivity tensor & $\mathbf{\chi}$ & $W/ (m \cdot {}^\circ C)$ & $Btu/ (h \cdot ft\cdot {}^\circ F)$ 	\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\end{center}
+
+\section{Two Phase Flow Reservoir Model}
+Water:
+
+\begin{equation}
+\frac{\partial}{\partial t}\Big(\frac{\phi S_w}{B_w}\Big) = \nabla\cdot\Big(\lambda_w(\nabla p_w-\gamma_w^n)\Big)+q_{ws}
+\end{equation}
+
+$\gamma^n_w = \rho_w^n\vec{g}$. We assume a time step of $n$ here.
+\\
+Oil:
+
+\begin{equation}
+\frac{\partial}{\partial t}\Big(\frac{\phi S_o}{B_o}\Big) = \nabla\cdot\Big(\lambda_o(\nabla p_o-\rho\vec{g}z)\Big)+q_{os}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+1&=S_o+S_w \\
+p_{cow} &= p_o-p_w		
+\end{split}
+\end{equation}
+
+Also, the well rate is computed as
+
+\begin{equation}
+\begin{split}
+q_{\alpha s} &=\sum_i N_i q_{\alpha s,i}= \sum_i N_iG_i\lambda_{\alpha,i}(p_{bh}-p_{\alpha,i})	\\
+\end{split}
+\end{equation}
+
+Where
+
+\begin{equation}
+\begin{split}
+G_i &=\frac{2\pi k_{eff}  h}{\text{In}(r_{e,i}/r_w)}	\\
+\lambda_{\alpha,i} &= \frac{k_{r\alpha,i}}{\mu_{\alpha,i} B_{\alpha,i}} \quad \alpha = o, w
+\end{split}
+\end{equation}
+
+The use of $i$ above assumes well location is not exactly on a grid node. Therefore, for every well location, the sum of the well rate is taken as the sum from all the grid nodes/CVFE volume surrounding the cell containing the well location. $N_i$ is used to account for the contribution of each of the surrounding nodes/ CVFE cell to the specified well rate. So far, we assume $F_i$ is equal to the contribution of the adjoining cells to the shape function at the well location. 
+For $p = p_o$ and $S_w$ as the primary variables, we make the following assumptions
+
+\begin{equation}
+\begin{split}
+p_{co}  &= p_{co}(S_w) 	\\
+p_{cg}  &= p_{cg}(S_g) 	\\
+k_{rw} &= k_{rw}(S_w)	\\
+k_{rg} &= k_{rg}(S_g)	\\
+k_{ro} &= k_{ro}(S_w, S_g)	\\
+B_w &= B_w(p) 	\\
+B_o &= B_o(p, R_{so}) 	\\
+\mu_w &= \mu_w(p) 	\\
+\mu_o &= \mu_o(p, R_{so}) 	\\
+\mu_g &= \mu_g(p) 	\\
+\phi &= \phi(p)	\\
+\gamma_\alpha &= \rho_\alpha^n\vec{g}
+\end{split}
+\end{equation}
+
+\subsection{Fully Implicit}
+
+\begin{equation}	\label{w1}
+\frac{1}{\Delta t}\Big[\Big(\frac{\phi S_w}{B_w}\Big)^{n+1}-\Big(\frac{\phi S_w}{B_w}\Big)^n\Big] =\theta\Big[ \nabla\cdot\Big(\lambda^{n+1}_w(\nabla p^{n+1}_w-\gamma_wz)\Big)+q^{n+1}_{ws}\Big]+(1-\theta)\Big[\nabla\cdot\Big(\lambda^{n}_w(\nabla p^{n}_w-\gamma_wz)\Big)+q^{n}_{ws}\Big]
+\end{equation}
+
+
+\begin{equation}	\label{o1}
+\frac{1}{\Delta t}\Big[\Big(\frac{\phi S_o}{B_o}\Big)^{n+1}-\Big(\frac{\phi S_o}{B_o}\Big)^n\Big] = \theta\Big[ \nabla\cdot\Big(\lambda^{n+1}_o(\nabla p^{n+1}_o-\gamma_oz)\Big)+q^{n+1}_{os}\Big]+(1-\theta)\Big[\nabla\cdot\Big(\lambda^{n}_o(\nabla p^{n}_o-\gamma_oz)\Big)+q^{n}_{os}\Big]\end{equation}
+
+Applying the control volume finite element method, we have the following over each element
+
+\begin{multline}	\label{w2}
+R_w = |\Omega_i|\Big[\Big(\frac{\phi S_w}{B_w}\Big)^{n+1}-\Big(\frac{\phi S_w}{B_w}\Big)^n\Big] - \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_w(\nabla p^{n+1}_w-\gamma_wz)\cdot\vec{n}+q^{n+1}_{ws}\Big]	\\
+- \Delta t(1-\theta)\Big[\oint_{\Gamma_i}\lambda^{n}_w(\nabla p^{n}_w-\gamma_wz)\cdot\vec{n}+q^{n}_{ws}\Big] = 0
+\end{multline}
+%
+\begin{multline}	\label{o2}
+R_o = |\Omega_i|\Big[\Big(\frac{\phi S_o}{B_o}\Big)^{n+1}-\Big(\frac{\phi S_o}{B_o}\Big)^n\Big] - \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_o(\nabla p^{n+1}_o-\gamma_oz)\cdot\vec{n}+q^{n+1}_{os}\Big]	\\
+- \Delta t(1-\theta)\Big[\oint_{\Gamma_i}\lambda^{n}_o(\nabla p^{n}_o-\gamma_oz)\cdot\vec{n}+q^{n}_{os}\Big] = 0
+\end{multline}
+
+Assuming the following finite element approximation for $p_o$, $S_w$  and $p_{cow}$ 
+\begin{equation}
+\begin{split}
+p_o &= \sum N_ip_{i} \\
+S_w &= \sum N_iS_{i} \\
+p_{cow} &= \sum N_ip_{c,i} \\
+\end{split}
+\end{equation}
+Then,
+\begin{equation}
+\begin{split}
+\nabla p_o &= \sum \nabla N_ip_{i} \\
+S_w &= \sum N_iS_{i} \\
+\nabla p_{cow} &= \sum \nabla N_ip_{c,i} \\
+\end{split}
+\end{equation}
+
+Using the above finite element approximations
+
+\begin{multline}	\label{w2a}
+R_w = |\Omega_i|\Big[\Big(\frac{\phi S_w}{B_w}\Big)^{n+1}-\Big(\frac{\phi S_w}{B_w}\Big)^n\Big] - \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_w(\nabla p^{n+1}_o-\nabla p^{n+1}_c-\gamma^{n+1}_wz)\cdot\vec{n}+ q^{n+1}_{ws}\Big]  \\
+- \Delta t(1-\theta)\Big[\oint_{\Gamma_i}\lambda^{n}_w(\nabla p^{n}_o-\nabla p^n_c-\gamma^n_wz)\cdot\vec{n}+q^{n}_{ws}\Big]
+\end{multline}
+
+\begin{multline}
+\frac{\partial R_w}{\partial S_w} = |\Omega_i|\Big(\frac{\phi }{B_w}\Big)^{n+1}- \Delta t\theta\Big[\oint_{\Gamma_i}\frac{k}{\mu_wB_w}\frac{d k_{rw}}{d S_w}(\nabla p_o-\nabla p_c-\gamma_wz) -\oint_{\Gamma_i}\lambda^{n+1}_w\nabla \big(\frac{d p_c}{d S_w}\big)\Big]  \cdot\vec{n}	\\
+- \Delta t\theta\frac{G}{B_w\mu_w}\frac{dk_{rw}}{dS_w}(p_{bh}-p_o+p_c)- \Delta t\theta\frac{Gk_{rw}}{B_w\mu_w}\frac{dp_c}{dS_w}
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_w}{\partial p} = |\Omega_i|S_w\Big[\phi \big(\frac{1}{B_w}\big)^\prime +\frac{1}{B_w}\phi^\prime\Big] - \Delta t\theta\Bigg[\oint_{\Gamma_i}\Big[\frac{k_{rw}k}{\mu_w}\big(\frac{1}{B_w}\big)^\prime+\frac{k_{rw}k}{B_w}\big(\frac{1}{\mu_w}\big)^\prime\Big](\nabla p_o -\nabla p_c-\gamma_w z) \\
++\frac{k_{rw}k}{B_w\mu_w}(\nabla N-\gamma_w^\prime) \Bigg]\cdot\vec{n} - \Delta t\theta\Big[\frac{Gk_{rw}}{\mu_w}\big(\frac{1}{B_w}\big)^\prime + \frac{Gk_{rw}}{B_w}\big(\frac{1}{\mu_w}\big)^\prime\Big](p_{bh}-p_o+p_c)+ \Delta t\theta\frac{Gk_{rw}}{B_w\mu_w}N
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_w}{\partial p_{bh}} = -\Delta t\theta\frac{Gk_{rw}}{B_w\mu_w}
+\end{multline}
+
+
+\begin{multline}	%\label{o2a}
+R_o = |\Omega_i|\Big[\Big(\frac{\phi S_o}{B_o}\Big)^{n+1}-\Big(\frac{\phi S_o}{B_o}\Big)^n\Big] - \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_o(\nabla p^{n+1}_o-\gamma^{n+1}_oz)\cdot\vec{n}+ q^{n+1}_{os}\Big]  \\
+- \Delta t(1-\theta)\Big[\oint_{\Gamma_i}\lambda^{n}_o(\nabla p^{n}_o-\gamma^n_oz)\cdot\vec{n}+q^{n}_{os}\Big]
+\end{multline}
+
+\begin{multline}	\label{o2a}
+R_o = |\Omega_i|\Big[\Big(\frac{\phi (1-S_w-S_g)}{B_o}\Big)^{n+1}-\Big(\frac{\phi (1-S_w-S_g)}{B_o}\Big)^n\Big] - \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_o(\nabla p^{n+1}_o-\gamma^{n+1}_oz)\cdot\vec{n}+ q^{n+1}_{os}\Big]  \\
+- \Delta t(1-\theta)\Big[\oint_{\Gamma_i}\lambda^{n}_o(\nabla p^{n}_o-\gamma^n_oz)\cdot\vec{n}+q^{n}_{os}\Big]
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_o}{\partial p} = |\Omega_i|(1-S_w-S_g)\Big[\phi \big(\frac{1}{B_o}\big)^\prime +\frac{1}{B_o}\phi^\prime\Big] - \Delta t\theta\Bigg[\oint_{\Gamma_i}\Big[\frac{k_{ro}k}{\mu_o}\big(\frac{1}{B_o}\big)^\prime+\frac{k_{ro}k}{B_o}\big(\frac{1}{\mu_o}\big)^\prime\Big](\nabla p_o -\gamma_o z) \\
++\frac{k_{ro}k}{B_o\mu_o}(\nabla N-\gamma_o^\prime) \Bigg]\cdot\vec{n} - \Delta t\theta\Big[\frac{Gk_{ro}}{\mu_o}\big(\frac{1}{B_o}\big)^\prime + \frac{Gk_{ro}}{B_o}\big(\frac{1}{\mu_o}\big)^\prime\Big](p_{bh}-p_o)+ \Delta t\theta\frac{Gk_{ro}}{B_o\mu_o}N
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_o}{\partial S_w} = -|\Omega_i|\Big(\frac{\phi }{B_o}\Big)^{n+1}- \Delta t\theta\oint_{\Gamma_i}\frac{k}{\mu_oB_o}\frac{d k_{ro}}{d S_w}(\nabla p_o-\gamma_oz) -\Delta t\theta\frac{G}{B_o\mu_o}\frac{dk_{ro}}{dS_w}(p_{bh}-p_o)
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_o}{\partial S_g} = -|\Omega_i|\Big(\frac{\phi }{B_o}\Big)^{n+1}- \Delta t\theta\oint_{\Gamma_i}\frac{k}{\mu_oB_o}\frac{d k_{ro}}{d S_g}(\nabla p_o-\gamma_oz) -\Delta t\theta\frac{G}{B_o\mu_o}\frac{dk_{ro}}{dS_g}(p_{bh}-p_o)
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_o}{\partial p_{bh}} = -\Delta t\theta\frac{Gk_{ro}}{B_o\mu_o}
+\end{multline}
+
+For a single well, we can write
+
+\begin{equation}
+\begin{split}
+R_{bh} = G \frac{k_{r\alpha}}{\mu B_\alpha}(p_{bh}-p_{\alpha})-q_{\alpha s} =0
+\end{split}
+\end{equation}
+
+Therefore
+
+\begin{equation}
+\begin{split}
+\frac{\partial R_{bh}}{\partial p} = \Big[G \frac{k_{r\alpha}}{\mu_\alpha}\big( \frac{1}{B_\alpha}\big)^\prime+G \frac{k_{r\alpha}}{B_\alpha}\big( \frac{1}{\mu_\alpha}\big)^\prime\Big](p_{bh}-p_{\alpha})-G \frac{k_{r\alpha}}{\mu B_{\alpha}}\\
+\end{split}
+\end{equation}
+
+and
+
+\begin{equation}
+\begin{split}
+\frac{\partial R_{bh}}{\partial S_w} = \frac{G}{\mu B_\alpha} \frac{ dk_{r\alpha}}{dS_w}(p_{bh}-p_{\alpha}) 
+\end{split}
+\end{equation}
+
+
+
+
+
+\section{Three Phase Flow Reservoir Model}
+\subsection{Saturated Phase}
+
+For unsaturated phase, $B_o(p,p_b), R_o(p,p_b), \mu_o(p,p_b) \text{ and } \rho_o(p,p_b)$. For saturated phase, $B_o(p), R_o(p), \mu_o(p) \text{ and } \rho_o(p)$.
+\newline
+Water:
+
+\begin{equation}
+\frac{\partial}{\partial t}\Big(\frac{\phi S_w}{B_w}\Big) = \nabla\cdot\Big(\lambda_w(\nabla p_w-\gamma_w^n)\Big)+q_{ws}
+\end{equation}
+
+$\gamma^n_w = \rho_w^n\vec{g}$. We assume a time step of $n$ here.
+\\
+Oil:
+
+\begin{equation}
+\frac{\partial}{\partial t}\Big(\frac{\phi S_o}{B_o}\Big) = \nabla\cdot\Big(\lambda_o(\nabla p_o-\gamma_o\nabla z)\Big)+q_{os}
+\end{equation}
+\\
+Gas:
+
+\begin{equation}
+\frac{\partial}{\partial t}\Big[\phi\Big(\frac{ S_g}{B_g}+R_{so}\frac{ S_o}{B_o}\Big)\Big] =  \nabla\cdot\Big(\lambda_g(\nabla p_g-\gamma_g\nabla z)\Big)+\nabla\cdot\Big(R_{so}\lambda_o(\nabla p_o-\gamma_o\nabla z)\Big)+q_{gs}+R_{so}q_{os}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+S_o+S_w+S_g&=1 \\
+p_o-p_w  &= p_{cow}		\\
+p_g-p_o  &= p_{cg}		\\
+q_g &= q_{gs}+R_{so}q_{os}
+\end{split}
+\end{equation}
+
+\begin{multline}	\label{g1}
+\frac{1}{\Delta t}\Big[\Big(\frac{\phi S_g}{B_g}\Big)^{n+1}-\Big(\frac{\phi S_g}{B_g}\Big)^n\Big] + \frac{1}{\Delta t}\Big[\Big(\frac{\phi R_{so}S_o}{B_o}\Big)^{n+1}-\Big(\frac{\phi R_{so}S_o}{B_o}\Big)^n\Big]  = \theta\Big[ \nabla\cdot\Big(\lambda^{n+1}_g(\nabla p^{n+1}_g-\gamma_gz)\Big)	\\
++\nabla\cdot\Big(\lambda^{n+1}_oR_{so}(\nabla p^{n+1}_o-\gamma_oz)\Big)+q^{n+1}_{g}\Big]	
++(1-\theta)\Big[\nabla\cdot\Big(\lambda^{n}_g(\nabla p^{n}_g-\gamma_gz)\Big)+\lambda^{n}_oR_{so}(\nabla p^{n}_o-\gamma_oz)\Big)+q^{n}_{g}\Big]
+\end{multline}
+
+Applying the control volume finite element method, we have the following over each element
+
+
+Using the  finite element approximations
+
+\begin{multline}	\label{g2a}
+R_g = |\Omega_i|\Big[\Big(\frac{\phi S_g}{B_g}\Big)^{n+1}-\Big(\frac{\phi S_g}{B_g}\Big)^n + \phi R_{so}\Big(\frac{1-S_w-S_g}{B_o}\Big)^{n+1}- \phi R_{so}\Big(\frac{1-S_w-S_g}{B_o}\Big)^{n}\Big] \\
+- \Delta t\theta\Big[\oint_{\Gamma_i}\lambda^{n+1}_g(\nabla p^{n+1}_o+\nabla p^{n+1}_{cg}-\gamma^{n+1}_g\nabla z)\cdot\vec{n} + \lambda^{n+1}_oR_{so}(\nabla p^{n+1}_o-\gamma^{n+1}_oz)\cdot\vec{n}+ q^{n+1}_{g}\Big]  \\
+- (1-\Delta t)\theta\Big[\oint_{\Gamma_i}\lambda^{n}_g(\nabla p^{n}_o+\nabla p^{n}_{cg}-\gamma^{n}_gz)\cdot\vec{n} + \lambda^{n}_oR_{so}(\nabla p^{n}_o-\gamma^{n}_oz)\cdot\vec{n}+ q^{n}_{g}\Big]  =0
+\end{multline}
+
+
+\begin{multline}
+\frac{\partial R_g}{\partial p} =  |\Omega_i|S_g\Big[\phi \big(\frac{1}{B_g}\big)^\prime +\frac{1}{B_g}\phi^\prime \Big]+   |\Omega_i|(1-S_w-S_g)\Big[\phi \frac{R^\prime_{so}}{B_o}+ \phi R_{so}\big(\frac{1}{B_o}\big)^\prime +\phi^\prime \frac{R_{so}}{B_o}\Big] - \\
+\Delta t\theta\oint_{\Gamma_i}\Bigg[\Big[\frac{k_{rg}k}{\mu_g}\big(\frac{1}{B_g}\big)^\prime+\frac{k_{rg}k}{B_g}\big(\frac{1}{\mu_g}\big)^\prime\Big](\nabla p_o +\nabla p_{cg}-\gamma_g\nabla z)  +\Big[ R_{so}\frac{k_{ro}k}{\mu_o}\big(\frac{1}{B_o}\big)^\prime+R_{so}\frac{k_{ro}k}{B_o}\big(\frac{1}{\mu_o} \big)^\prime+\lambda_oR_{so}^\prime\Big](\nabla p_o -\gamma_o\nabla z)\\
++\lambda_g(\nabla N-\gamma_g^\prime\nabla z) +\lambda_o R_{so}(\nabla N-\gamma_o^\prime\nabla z) \Bigg]\cdot\vec{n} - \Delta t\theta\Big[\frac{Gk_{rg}}{\mu_g}\big(\frac{1}{B_g}\big)^\prime + \frac{Gk_{rg}}{B_g}\big(\frac{1}{\mu_g}\big)^\prime\Big](p_{bh}-p_o-p_{cg})+ \Delta t\theta\frac{Gk_{rg}}{B_g\mu_g}N \\
+- \Delta t\theta\Big[\frac{GR_{so}k_{ro}}{\mu_o}\big(\frac{1}{B_o}\big)^\prime + \frac{GR_{so}k_{ro}}{B_o}\big(\frac{1}{\mu_o} \big)^\prime + G\lambda_o R^\prime_{so}\Big](p_{bh}-p_o)+ \Delta t\theta R_{so}\frac{Gk_{ro}}{B_o\mu_o}N
+\end{multline}
+%
+
+\begin{multline}
+\frac{\partial R_g}{\partial S_w} = -|\Omega_i|R_{so}\Big(\frac{\phi }{B_o}\Big)^{n+1}-\Delta t\theta\oint_{\Gamma_i}\frac{k}{\mu_oB_o}R_{so}\frac{d k_{ro}}{d S_w}(\nabla p_o-\gamma_o\nabla z) - \Delta t\theta R_{so}\frac{G}{B_o\mu_o}\frac{dk_{ro}}{dS_w}(p_{bh}-p_o) 	
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_g}{\partial S_g} = |\Omega_i|\phi\Big(\frac{1 }{B_g} -\frac{ R_{so}}{B_o} \Big)- \Delta t\theta\Big[\oint_{\Gamma_i}\frac{k}{\mu_gB_g}\frac{d k_{rg}}{d S_g}(\nabla p_o+\nabla p_{cg}-\gamma_g\nabla z) + \lambda_g\nabla \big(\frac{d  p_{cg}}{dS_g}\big)\Big] \\
+- \Delta t\theta \frac{G}{B_g\mu_g}\frac{dk_{rg}}{dS_g}(p_{bh}-p_o-p_{cg})  + \Delta t\theta \frac{G}{B_g\mu_g}\frac{dp_{cg}}{dS_g}	
+\end{multline}
+%
+\begin{multline}
+\frac{\partial R_g}{\partial p_{bh}} = -\Delta t\theta\frac{Gk_{rg}}{B_g\mu_g}-\Delta t\theta\frac{G R_{so}k_{ro}}{B_o\mu_o}
+\end{multline}
+
+Note:
+
+\begin{multline}
+\frac{\partial R_w}{\partial S_g}  = 0
+\end{multline}
+
+\addcontentsline{toc}{chapter}{Bibliography \dotfill}
+\bibliography{ref}
+\bibliographystyle{achicago}
+\end{document}
+
+

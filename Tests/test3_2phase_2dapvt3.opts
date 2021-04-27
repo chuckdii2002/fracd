@@ -1,0 +1,19 @@
+-water_FVFmodel ANALYTICAL
+-water_viscmodel ANALYTICAL
+-water_densmodel ANALYTICAL
+-water_refFVF 1.0142
+-water_compress 3e-6
+-water_preffvf 14.7
+-water_refvisc 0.96
+-water_visccoeff 0.
+-water_prefvisc 14.7
+-water_refdens 1.0
+-water_denscoeff 0.
+-water_prefdens 0.
+-oil_FVFmodel ANALYTICAL_AND_INTERPOLATION
+-oil_viscmodel ANALYTICAL_AND_INTERPOLATION
+-oil_densmodel ANALYTICAL_AND_INTERPOLATION
+-oil_PVTfilename oil_pvt.txt
+-PcowInrelPermData
+-oilwaterrelpermfilename owrelperm1.txt
+-bubblepointfilename bubblepoint.txt

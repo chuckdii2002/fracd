@@ -1,0 +1,432 @@
+Vec Object: 1 MPI processes
+  type: seq
+0.
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+3920.41
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4161.22
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4156.14
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4156.07
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4156.07
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4156.07
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4156.07
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4198.55
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.63
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4193.49
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4223.23
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.71
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4215.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4243.14
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.76
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.61
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4233.6
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4260.81
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.53
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.39
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4249.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4275.85
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4263.12
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.99
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4262.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4287.33
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.3
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.09
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4274.03
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4289.45
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.09
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.21
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.24
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.24
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.24
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4296.25
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4351.52
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4316.24
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.74
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.38
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.33
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.33
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4312.32
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4330.27
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4294.58
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4294.7
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.29
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.72
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.88
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.94
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.96
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.
+Vec Object: 1 MPI processes
+  type: seq
+4295.97
+2000.

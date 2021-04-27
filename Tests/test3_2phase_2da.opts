@@ -1,0 +1,37 @@
+-dim 2 
+-meshfilename 2phasemesh.msh 
+-perm 300,300
+-fluid OILWATER
+#Well data
+-nw 1
+-w0_top 3000,3000 
+-w0_bottom 3000,3000 
+-w0_coords 3000,3000 
+-w0_Pbh 2000
+-w0_h 30 
+-w0_rw 0.292 
+-w0_Qws 500
+-w0_Qos 500
+-w0_constraint oilrate 
+-w0_type producer
+#-w0_constraint waterrate 
+#-w0_type injectorwater
+-w1_top 3000,3000 
+-w1_bottom 3000,3000 
+-w1_coords 4500,4500 
+-w1_Pbh 2000
+-w1_h 30 
+-w1_rw 0.292 
+-w1_Qws 500
+-w1_constraint waterrate 
+-w1_type injectorwater
+-verbose
+#Reservoir and fluid properties
+-phi 0.3
+-Cr 4e-6
+-pref_phi 4000
+-timevalue 10
+-refpressure 4000
+-initialpressure 4000
+-initialSw 0.3
+-units FIELDUNITS

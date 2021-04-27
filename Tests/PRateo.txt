@@ -1,0 +1,432 @@
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-18282.7
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1283.35
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1496.1
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1501.13
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1501.42
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1501.44
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1501.45
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1501.45
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1095.28
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1079.63
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.65
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.57
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.56
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.56
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.56
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-1078.56
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-993.827
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-985.156
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-984.42
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-984.361
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-984.356
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-984.356
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-984.356
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-932.823
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.347
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.116
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.099
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.097
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.097
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-928.097
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-890.035
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.701
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.325
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.286
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.282
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.281
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.281
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-885.281
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-853.207
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.909
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.191
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.106
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.097
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.095
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.095
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-847.095
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-815.919
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-809.332
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.938
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.699
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.663
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.658
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.657
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.657
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-807.657
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-680.087
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-760.785
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-770.334
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.02
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.388
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.471
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.49
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.494
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.495
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-772.496
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-708.734
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-649.222
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-643.318
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.708
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.624
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.612
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-642.61
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-570.284
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.884
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.143
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.087
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.088
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.091
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.092
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.092
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093
+Vec Object: Well oil Rate 1 MPI processes
+  type: seq
+0.
+-561.093

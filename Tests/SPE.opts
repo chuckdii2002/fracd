@@ -1,0 +1,36 @@
+-dim 3 
+-meshfilename 1stSPE.msh 
+-perm 300,300,300
+-fluid OILWATERGAS
+#Well data
+-nw 2
+-w0_top 3000,3000,60 
+-w0_bottom 3000,3000,60
+-w0_coords 500,500,-8335 
+-w0_Pbh 5000
+-w0_h 2 
+-w0_rw 0.292 
+-w0_Qws 100
+-w0_constraint waterrate 
+-w0_type injectorwater
+-w1_top 3000,3000,-540 
+-w1_bottom 3000,3000,-540 
+-w1_coords 9500,9500,-8400 
+-w1_Pbh 2000
+-w1_h 2 
+-w1_rw 0.292 
+-w1_Qos 500
+-w1_constraint pressure 
+-w1_type producer
+-verbose
+#Reservoir and fluid properties
+-phi 0.3
+-Cr 4e-6
+-pref_phi 4000
+-timevalue 10
+-maxtimestep 1000
+-refpressure 4000
+-initialpressure 4000
+-initialSw 0.2
+-units FIELDUNITS
+-elementtype HEXAHEDRAL

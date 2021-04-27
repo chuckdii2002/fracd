@@ -1,0 +1,15 @@
+-dim 3 
+-meshfilename 3dmesh.msh 
+-ubc 
+-ubc_numlabels 5 
+-UBC_labels 1,2,4,5,6
+-Ubc_Componentsperlabel 2,2,3,2,2
+-Ubc_Components 0,1,0,1,0,1,2,0,1,0,1 
+-Ubc_values 0,0,0,0,0,0,0,0,0,0,0
+-tractionbc 
+-tractionbc_numlabels 1 
+-tractionbc_labels 3
+-tractionbc_Componentsperlabel 3
+-tractionbc_Components 0,1,2 
+-tractionbc_values 0,0,-0.2
+-elementtype TETRAHEDRAL

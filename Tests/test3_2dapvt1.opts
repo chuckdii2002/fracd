@@ -1,0 +1,14 @@
+-waterFVFmodel ANALYTICAL
+-waterviscmodel ANALYTICAL
+-waterdensmodel ANALYTICAL
+-waterrefFVF 1.0
+-watercompress 1.0
+-waterrefvisc 1.0
+-watervisccoeff 0.
+-waterrefdens 1.0
+-waterdenscoeff 0.
+-waterrefpressure 0.
+-oilFVFmodel INTERPOLATION
+-oilviscmodel INTERPOLATION
+-oildensmodel INTERPOLATION
+-oilPVTfilename oilpvt.txt

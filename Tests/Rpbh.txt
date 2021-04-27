@@ -1,0 +1,432 @@
+Vec Object: 1 MPI processes
+  type: seq
+-40314.2
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-2087.41
+0.
+Vec Object: 1 MPI processes
+  type: seq
+53.6903
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.724644
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.038545
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.00274644
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.00019094
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.00019094
+0.
+Vec Object: 1 MPI processes
+  type: seq
+15.3983
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.5714
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.0640762
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.00802804
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.000663726
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-5.33756e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-4.26808e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-4.26808e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+14.4063
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.181462
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.0468337
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.00454553
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.000359565
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-2.79779e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-2.79779e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+14.3967
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.603175
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.0256041
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.000735799
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-5.13228e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-3.71315e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-3.71315e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+14.9752
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.702712
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.0415943
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.000884521
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.000102217
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.10786e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.17432e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.17432e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+15.1258
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.856018
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.061843
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.00523268
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.000551642
+0.
+Vec Object: 1 MPI processes
+  type: seq
+5.99301e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+6.55819e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+6.55819e-06
+0.
+Vec Object: 1 MPI processes
+  type: seq
+15.1615
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.81612
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.348807
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.0417521
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.00565999
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.0007907
+0.
+Vec Object: 1 MPI processes
+  type: seq
+0.000110625
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.54725e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+1.54725e-05
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+40.6046
+0.
+Vec Object: 1 MPI processes
+  type: seq
+20.5602
+0.
+Vec Object: 1 MPI processes
+  type: seq
+18.1882
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.7695
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.678
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6573
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6526
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6515
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6513
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+17.6512
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+329.7
+0.
+Vec Object: 1 MPI processes
+  type: seq
+86.9877
+0.
+Vec Object: 1 MPI processes
+  type: seq
+62.9054
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.4174
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0733
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0251
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0184
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0174
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+60.0173
+0.
+Vec Object: 1 MPI processes
+  type: seq
+120.597
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-6.59568
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-6.46091
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-3.44376
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-1.29443
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.4547
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.156982
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.0537923
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.0183598
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.00625266
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.00212692
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.000723003
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-0.000245702
+0.
+Vec Object: 1 MPI processes
+  type: seq
+-8.34942e-05
+0.

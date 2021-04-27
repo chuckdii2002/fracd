@@ -1,0 +1,191 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb,latexsym,amscd}
+\usepackage{subfigure} 
+\usepackage{booktabs}
+\usepackage[list-final-separator={, and }]{siunitx}
+\usepackage[shadow,textsize=small,textwidth=5.5cm]{todonotes}
+\usepackage{stmaryrd}
+\newtheorem{remark}{Remark}
+\usepackage{geometry}
+
+\usepackage{xcolor}
+\newcommand{\FIXME}[1]{ \ \\ \hspace* {-1.5 cm}
+  \textsc{\textcolor{red}{\texttt{FIXME:}#1}} \medskip\par}
+
+\title{Authors' replies to reviewers' comments on\\\textit{A Variational Phase-Field Model for Hydraulic Fracturing in Porous Media}}
+
+\author{Chukwudi Chukwudozie \and Blaise Bourdin \and Keita Yoshioka}
+
+
+\DeclareMathOperator{\e}{{\rm e}}
+
+\newcommand{\trp}{^{\scriptsize \text{T}}}
+\newcommand{\itp}{^{\scriptsize -\text{T}}}
+\newcommand{\sqrtp}{^{\scriptsize \text{T/2}}}
+\newcommand{\isqrtp}{^{\scriptsize -\text{T/2}}}
+\newcommand{\inv}{^{\scriptsize -1}}
+\newcommand{\sqr}{^{\scriptsize \text{1/2}}}
+\newcommand{\invsqr}{^{\scriptsize -\text{1/2}}}
+
+\newcommand{\Haus}{\mathcal{H}^{N-1}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ATone}{\texttt{AT$_1$}}
+\newcommand{\ATtwo}{\texttt{AT$_2$}}
+
+\newcommand{\sigmaeff}{\sigma^{\mathit{eff}}}
+\newcommand{\sigmavol}{\sigma_{\mathit{vol}}}
+\newcommand{\I}{\mathrm{I}}
+
+\newcommand{\KYCom}[1]{\textcolor{red!55!blue}{#1}}
+\newcommand{\BBCom}[1]{\textcolor{red}{#1}}
+\newcommand{\CCCom}[1]{\textcolor{green!55!blue}{#1}}
+\newcommand{\AuthCom}[1]{\textcolor{blue}{#1}}
+\begin{document}
+
+
+\maketitle
+
+\section*{Replies to reviewer 1}
+The authors propose a phase-field model for hydraulic fracturing in porous media.
+The paper starts with an introduction, followed by the governing notation and equations. In Section 3, the phase-field approximation is considered. Comments on the numerical implementation are provided in Section 4. Finally, in Section 5, several numerical tests are presented.
+Despite that numerous studies (all important published studies are listed nicely in the introduction!) have appeared in recent years on phase-field fracture modeling applied to hydraulic fracturing, it is definitely necessary to investigate these phenomena further.
+However, the paper is a bit too much written from an engineering style point view (detailed information on algorithms and their tolerances, mesh refinement studies etc. are missing). CMAME is a major numerical journal in which this information must be included.
+In addition, the following remarks must be addressed in case the authors envisage to prepare a revision:
+
+\subsection*{Major remarks}
+\begin{enumerate}
+\item Section 2: 
+\begin{enumerate}
+	\item Page 5: it is realistic to assume $p_r = p_f$ on the fracture boundary? I would assume that the fracture pressure is much higher than the pressure in the porous medium? \\
+	\AuthCom{These are indeed a delicate points which we had not clearly addressed in the original submission. We thank the reviewer for this insightful comment.\\
+	In conventional reservoirs, the ratio of the net pressure (fracture average pressure - pore pressure) over the pore pressure is actually very small, and even in unconventional reservoirs, it is typically at most 2.  
+	For the sake of simplicity, we decided to identify the thickness-averaged fracture in the crack and the pore pressure.
+	Under this assumption, we have that $p_r = p_f$ in $\Gamma$.
+	We added a short explanation at the beginning of Section 2.3}
+	\item Page 5: It is not clear, why the leak-off terms should cancel? Other studies use for instance Carter's leak-off model to account for it. \\
+	\AuthCom{
+	Carter's leak-off law is derived from the asymptotics of a 1D diffusion equation, assuming constant fracture width and height and neglecting the specific of the diffusion process in the reservoir (hence the $\Delta p / \sqrt{t}$ scaling).
+	While this is reasonable for a fully developed fracture in a layered system and if we can assume linear flow, it is not always the case. \\
+	In our formulation, we applied mass balance at the fracture--porous media boundary i.e.
+	\begin{align}
+	\label{leakoffequation}
+	q_l &= -[\![\vec{q}_r]\!]\cdot\vec{n}_{\Gamma}	& \text{on }  \Gamma
+	\end{align}
+	This in turns means that the leak-off terms cancel algebraically once the fracture and porous media fluid flow equations are combined (the mass out of fracture $=$ the mass into the porous media).\\
+	The traditional leak-off treatment is now mentioned in the added explanation at the beginning of Section 2.3.
+}
+
+
+\end{enumerate}
+
+\item Section 3, page 8 (bottom)
+The poroelastic model the authors are using is based on a upscaled model from fluid-structure interaction at the pore scale level. Here, the characteristic pore size does not explicitly appear, but becomes dominant in the limit.
+Thus, it is not possible from the physical point of view to pass with $\varepsilon\to 0$!. 
+
+Please re-write this statement.
+
+\AuthCom{Biot's poroelasticity model is indeed an upscaled model, and can be formally derived through mathematical homogenization in the limit of pore size approaching 0. It is mathematically consistent to send $\varepsilon$ to 0, as long as the pore size goes to 0 faster than $\varepsilon$.
+%
+Nevertheless, we added the following sentence at the end of Section 3.2: ``Note that Biot's poroelasticity model can be seen as an upscaled model of a fluid-structure interaction problem, when the pore size asymptotically approaches 0, so that the argument above holds provided that $\varepsilon$ approaches 0 slower than the pore size. ''
+}
+\item Section 4:
+\begin{enumerate}
+	\item Page 10: bi-linear means 2D. But the authors also present 3D test cases. Please rewrite and add `tri-linear'
+	\item After (32) must be a comma not a period
+
+	\item The solution algorithm does not become clear. Do the authors solve for $v,u,p$ subsequently via alternate minimization or do they first solve for $u,v$ and then alternate with $p$?
+
+    \AuthCom{Thanks for pointing these out. The points (a) -- (c) have been addressed in the manuscript.}
+
+	\item What are the stopping criteria and tolerances? 
+
+	\item How many iterations with respect to fixed-stress and alternate minimization are necessary with respect to $h$ refinement?
+	I consider this remark as really crucial as CMAME is a computational, numerical, journal in which such information should be given!
+
+	\item Section 4.2: What is the dependence of $\delta_{\varepsilon}'$ on $\varepsilon$ variations and mesh refinement in terms of $h$?
+
+Is it robust?
+\end{enumerate}
+
+\item Section 5: 
+\begin{enumerate}
+	\item Section 5.2: please add mesh refinement studies to show the robustness of your approach with respect to $\delta_{\varepsilon}'$, number of fixed-stress iterations, iterations of the alternate minimization algorithm, etc.
+
+	\item Section 5.4: please add the same information as just in mentionen before in point 4a).
+
+	\item Section 5.5, Fig. 16: Here the fracture patterns in view of the stress-shadowing effect differ from the published literature, e.g., Castonguay et al., SPE-166259-MS, 2013.
+	
+Please give an explanation.
+
+	\AuthCom{
+	Classical models based on LEFM are essentially equivalent to finding critical points of the total fracture energy (22), with an implicit bias for symmetric solution induced by a local path selection criterion. However, energy (22) may admit multiple families of critical points, which may or may not be symmetric, and may or may not be stable. Indeed, loss of stability of critical points of the phase field energy plays a fundamental role in the modeling of crack nucleation. Furthermore, as seen in~\cite{Tanne-2017a}, the symmetric solution is often the least stable solution. In order to prove that the numerical solution computed are indeed associated with the first bifurcation of the energy and hence the ``most stable'' ones, an analytical or numerical stability analysis similar to that of~\cite{GeromelFisher-Marigo-2018a} would be required. This is well beyond the scope of this article, so we simply added a single sentence stating that the difference bewteen patterns comes from the fact that the solution may not be unique and a reference to~\cite{Tanne-2017a,Tanne-Chukwudozie-EtAl-2019a}.
+}
+\end{enumerate}
+
+\item There are typos of the English language throughout the paper.
+Some could have found by running a spell-check. For instance
+
+-- page 9, btained -$>$ obtained.
+
+Other are for example:
+
+-- Page 2: `dimension elements' -$>$ `dimensional elements'
+
+-- Page 2: `variational phase-field has ...` -$>$ `variational phase-field approach has ...`
+
+-- Page 4: `source or sink term' -$>$ `source or sink terms'
+
+-- Page 4: `the Biot's' -$>$ 'Biot's'
+
+-- Page 14: increaing -$>$ increasing
+
+    \AuthCom{We thank for pointing out these errors. They have been fixed in the manuscript.}
+
+\end{enumerate}
+
+
+\subsection*{Minor remarks}
+\begin{enumerate}
+	\item Page 2: extended finite element method or XFEM
+	
+	--$>$ These are the same things! You should not use `or' but just say that XFEM is the abbreviation of extended finite elements.
+	
+	\item Section 4.2: a closing parenthesis is missing after Figure 4-(right).
+	
+	\item  Figure 3: I would briefly cite or explain `Sneddon' in the caption.
+\end{enumerate}
+
+    \AuthCom{We thank the reviewer again. These errors have been fixed accordingly.}
+
+\section*{Replies to reviewer 2}
+This paper presents a fully fledged phase-field model for hydraulic fracture, accounting for Reynolds flow inside the cracks, reservoir permeability, poro-elasticity, and fluid-structure interaction. The model is clearly and synthetically presented. The authors report a series of convincing numerical results. The paper is interesting and generally well written. It contains several interesting original points with respect to the existing literature on the subject, including a smeared representation of the fluid flow inside the cracks.  Therefore I recommend publication with minor revisions. My suggestions are summarized below:
+
+It would be useful to have more details on the stress split of section 4.1. The authors refer to~\cite{Mikelic-Wheeler-2013a}, but it would be better to be self-consistent.
+
+\KYCom{In light of the reviewer's comment, a couple of additional derivation steps have been inserted after (31).}
+
+The computation of the crack opening appear to me the most delicate part of the work. It is not clear to me how the computation of the line integral of Figure 2 is implemented in practice. It seems to me not trivial to do it automatically at each time step. Could the author give the explicit algorithm used in the code?
+
+\KYCom{The reviewer is right that it is indeed a very delicate part of implementation. Our implementation is one of the possibilities and may not necessary be the optimal way but nevertheless we added our version of implementation with more detailed procedures in Algorithm.}
+
+The authors use dimensional parameters. It would be nice to add a dimensional analysis showing explicitly which are the relevant dimensionless parameter for the model. Some parameters are set to $10^-16$ (k), which seems to me dangerous for numerical rounding errors and not clear. Which is the motivation for the precise choices? 
+
+\KYCom{We thank the reviewer for the comments. As pointed out, some of the parameters' values are not numerically favourable and we performed all the analyses in a scaled domain. Initially the scaling analysis seemed to derail from our discussion, but we decided to add the detailed procedure in Appendix.}
+
+In Figure 7 the the numerical and analytical solutions for the fracture length are not so close. Is there any explanation for the discrepancy?
+
+\KYCom{While the pressure is the primary variable solved and the width recovery computation is quite established \cite{chuks}, the fracture length is extracted from the surface energy from the system (the last term in Equation 26). As it is studied in \cite{Tanne-2017a}, the phase-field variable's profile needs to be taken into account especially around the tip in order to fully recover the length. A couple of sentences have been added in the corresponding part.}
+
+For at least one of the cases fo Figure 16, could the author give some details about the evolution in time of the cracks. Is the propagation unstable? Is there any influence of the phase-field regularising length?
+
+\KYCom{Thanks for raising this issue. This is not canused by unstable fracture propagation or the regularizing length. The loss of symmetry has been observed repeatedly and it turns out to be a more energetically favoured state as discussed above in our reply to reviewer 1's comment in 4 c and in \cite{Tanne-2017a}.}
+
+Page 6 line 15: applie --$>$ applied
+
+\KYCom{It has been fixed.}
+
+\bibliographystyle{plain}
+\bibliography{dissertationreference}
+
+
+\end{document}

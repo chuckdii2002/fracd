@@ -1,0 +1,89 @@
+Please see kalthoff.geo
+
+variable thickness mesh
+http://onelab.info/pipermail/gmsh/2013/008328.html
+https://www.cfd-online.com/Forums/mesh-generation/183836-gmsh-extrude-boundary-layer-unstructured-mesh.html
+http://gmsh.info/doc/texinfo/gmsh.html#t3_002egeo
+http://gmsh.info/doc/texinfo/gmsh.html
+
+hole_extrude.geo has example of converting to  abaqus format
+
+Thereafter, run gmsh kathoff.geo -3 
+gmsh kathoff.geo -2 only generates the surface mesh in 3d. Good if want to view
+./mac_convert_mesh 2 1 kathoff.inp kathoff.ucd
+
+structured meshes
+https://www.youtube.com/watch?v=O1FyiBBuN98
+https://www.youtube.com/watch?v=ewp3VGyymK4
+http://matveichev.blogspot.com/2013/12/building-hexagonal-meshes-with-gmsh.html
+http://www.cfdyna.com/Home/gmshCatalogue.html
+
+abaqus:
+https://www.youtube.com/watch?v=yR2DKliOZHA&list=PLn4RygU_rR64ggXAxSAZp8zMzHsw4DyZn
+
+https://www.youtube.com/watch?v=GJNcyyVQcH4
+https://www.youtube.com/watch?v=arhlypzX-QQ
+https://www.youtube.com/watch?v=MrYxGZtbFwA
+http://ifcuriousthenlearn.com/blog/2015/04/02/Abaqus-FEA-Scripting-with-python/#Beam_Example_Results
+https://simplifiedfem.wordpress.com/about/tutorial-write-a-simple-umat-in-abaqus/
+
+https://www.seas.harvard.edu/courses/es128/Truss3.inp
+
+http://dsk.ippt.pan.pl/docs/abaqus/v6.13/books/bmk/default.htm?startat=ch01s15ach114.html
+http://dsk.ippt.pan.pl/docs/abaqus/v6.13/books/usb/default.htm?startat=pt01ch02s01aus05.html
+
+https://edoc.site/abaqus-tutorial-2-pdf-free.html
+
+http://www-h.eng.cam.ac.uk/help/programs/fe/abaqus/faq68/abaqusf7.html
+
+https://sites.google.com/site/abaquspythonscripting/example
+
+https://stackoverflow.com/questions/45127414/apply-temperature-to-specified-nodes-in-abaqus-with-python-script
+
+https://gist.github.com/anonymous/dcc1baf54288a3602e557b587a86bb8d
+
+https://stackoverflow.com/questions/37048689/abaqus-script-to-select-elements-on-a-surface
+
+http://www.brown.edu/Departments/Engineering/Courses/En2340/Programming/ABAQUS/user_material.inp
+
+https://www.sharcnet.ca/Software/Abaqus610/Documentation/docs/v6.10/books/cmd/default.htm?startat=pt04ch08s03.html
+
+output
+https://damask.mpie.de/Usage/Abaqus
+https://datacenterhub.org/resources/2878/download/Abaqus_Tutorial.pdf
+
+http://www-h.eng.cam.ac.uk/help/programs/fe/abaqus/faq68/abaqusf12.html
+
+Learn about orphan mesh
+https://stackoverflow.com/questions/33763378/creating-an-orphan-mesh-from-nodal-coordinates-in-abaqus-using-python
+
+fortran read/write
+http://www.math.hawaii.edu/~hile/fortran/fort7.htm
+
+
+User subroutine
+https://www.youtube.com/watch?v=5br5fjqK0uM
+http://ivt-abaqusdoc.ivt.ntnu.no:2080/v6.11/books/sub/default.htm?startat=ap01s02.html
+http://www.eng-tips.com/viewthread.cfm?qid=210107
+http://www.eng-tips.com/viewthread.cfm?qid=311221
+http://www.eng-tips.com/viewthread.cfm?qid=392972
+http://www.eng-tips.com/viewthread.cfm?qid=404743
+http://www.eng-tips.com/viewthread.cfm?qid=395624
+
+geomechanics
+https://classes.engineering.wustl.edu/2009/spring/mase5513/abaqus/docs/v6.6/books/exa/default.htm?startat=ch09s01aex124.html
+
+https://www.sharcnet.ca/Software/Abaqus/6.14.2/v6.14/books/exa/default.htm?startat=ch01s01aex22.html
+https://www.sharcnet.ca/Software/Abaqus/6.14.2/v6.14/books/eif/exa_erosion.inp
+
+https://www.sharcnet.ca/Software/Abaqus/6.14.2/v6.14/books/exa/default.htm?startat=ch01s01aex22.html
+
+node/element/part assembly
+http://ivt-abaqusdoc.ivt.ntnu.no:2080/v6.11/books/usb/default.htm?startat=pt01ch02s01aus05.html
+
+https://www.sharcnet.ca/Software/Abaqus610/Documentation/docs/v6.10/books/usb/default.htm?startat=pt01ch02s09aus26.html
+
+surfaces
+
+http://web.mit.edu/calculix_v2.7/CalculiX/ccx_2.7/doc/ccx/node247.html
+http://bobcat.nus.edu.sg:2080/English/SIMACAEMODRefMap/simamod-c-deformablesurf.htm

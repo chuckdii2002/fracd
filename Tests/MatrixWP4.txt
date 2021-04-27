@@ -1,0 +1,260 @@
+Mat Object: 1 MPI processes
+  type: seqaij
+row 0: (0, 10.0787)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52479)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52574)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52575)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52575)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52575)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 9.52575)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96044)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.96064)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3713)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3714)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3714)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3714)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3714)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 8.3714)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.75992)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.76003)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.76003)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.76003)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.76003)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.76003)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.1636)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 7.16378)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62443)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.62459)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16248)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.1625)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 6.16251)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.7604)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.7604)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.39807)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.39807)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.07056)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06992)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
+Mat Object: (P_fieldsplit_3_) 1 MPI processes
+  type: seqaij
+row 0: (0, 5.06998)  (1, 0.) 
+row 1: (0, 0.)  (1, 1.) 
